@@ -1,0 +1,8 @@
+文字加粗  <string></string>或<b></b>
+
+斜体<em></em>或<i></i>
+
+删除线<del></del>或<s></s>
+
+下划线<ins><ins>或<u></u>
+

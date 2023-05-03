@@ -1,0 +1,82 @@
+HTML5 的新增特性主要是针对于以前的不足，增加了一些新的标签、新的表单和新的表单属性等。
+这些新特性都有兼容性问题，基本是 IE9+ 以上版本的浏览器才支持，如果不考虑兼容性问题，可以大量使用这
+些新特性。
+新特性增加了很多，但是我们专注于开发常用的新特性
+
+ HTML5 新增的语义化标签
+以前布局，我们基本用 div 来做。div 对于搜索引擎来说，是没有语义的。
+HTML5 新增的语义化标签
+<header>：头部标签
+ <nav>：导航标签
+ <article>：内容标签
+ <section>：定义文档某个区域
+ <aside>：侧边栏标签
+ <footer>：尾部标签
+这种语义化标准主要是针对搜索引擎的
+ 这些新标签页面中可以使用多次
+ 在 IE9 中，需要把这些元素转换为块级元素
+ 其实，我们移动端更喜欢使用这些标签
+ HTML5 还增加了很多其他标签
+
+1.2 HTML5 新增的多媒体标签
+新增的多媒体标签主要包含两个：
+1. 视频：<video>
+2. 音频：<audio> 
+使用它们可以很方便的在页面中嵌入音频和视频，而不再去使用 flash 和其他浏览器插件。
+HTML5 在不使用插件的情况下，也可以原生的支持视频格式文件的播放，当然，支持的格式是有限的。当前 <video> 元素支持三种视频格式： mp4，webm，ogg 尽量使用 mp4格式
+HTML5 在不使用插件的情况下，也可以原生的支持音频格式文件的播放，当然，支持的格式是有限的。
+音频：<audio> ：
+语法：
+<video src="文件地址" controls="controls"></video>
+video的常见属性：autoplay=autoplay //视频自动播放，谷歌浏览器需要添加muted来解决自动播放问题
+controls=controls  //向用户显示播放控件
+width=多少px  //设置播放器的宽度
+height=多少px  //设置播放器的高度
+loop=loop  //是否循环播放
+preload=auto  //预先加载视频，如果有了autoplay就忽略这个属性
+preload=none  //不预先加载视频
+src=url（）//视频路径
+poster=imgurl   //加载等待的画面图片
+muted=muted  //静音播放
+
+HTML5 在不使用插件的情况下，也可以原生的支持音频格式文件的播放，当然，支持的格式是有限的。
+音频<audio>：当前 <audio> 元素支持三种音频格式：mp3，wav，ogg
+语法：
+<audio src="文件地址" controls="controls"></audio>
+常见属性： autoplay=autoplay //音频就绪后自动播放
+controls=controls  //向用户显示控件，比如播放按钮
+loop=loop  //循环播放
+src=url  //音频路径
+
+谷歌浏览器把音频和视频自动播放禁止了
+
+ 多媒体标签总结
+音频标签和视频标签使用方式基本一致
+ 浏览器支持情况不同
+ 谷歌浏览器把音频和视频自动播放禁止了
+ 我们可以给视频标签添加 muted 属性来静音播放视频，音频不可以（可以通过JavaScript解决）
+ 视频标签是重点，我们经常设置自动播放，不使用 controls 控件，循环和设置大小属性
+
+HTML5 新增的 input 类型
+type="email" //限制用户输入必须为email类型
+type="url" //限制用户输入必须为url类型
+type="date" //限制用户输入必须为日期类型
+type="time" //限制用户输入必须为时间类型
+type="month"  //限制用户输入必须为月份类型
+type="week" //限制用户输入必须为周类型
+type="number"  //限制用户输入必须为数字类型
+type="tel"  //手机号码
+type="search" //搜索框
+type="color" //生成一个颜色选择表单
+重点记住： number tel search 这三个
+
+ HTML5 新增的表单属性：
+required=required  //表单拥有该属性表示其内容不能为空，必填
+placeholder=""  //提示信息，框里的信息，输入内容会自动消失
+autofocus=autofocus  //自动聚焦属性，页面加载完成自动聚焦到指定表单
+autocomplete=off/on  //当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项，默认已经打开on 关闭off ，需要放在表单内，同时加上name属性，同时成功提交
+multiple=multiple //配合文件文本，可以多选文件提交
+可以通过以下设置方式修改placeholder里面的字体颜色：
+input::placeholder {
+ color: ;
+ }

@@ -1,0 +1,89 @@
+表单的目的是为了收集用户信息
+一个完整的表单通常由表单域，表单控件（也叫表单元素），提示信息三个部分构成
+表单域是一个包含表单元素的区域
+<form></form>标签用于定义表单域，以实现用户信息的收集和传递
+form会把它范围内的表单元素信息提交给服务器
+
+<form action="要提交到哪里" method="提交方式"name="表单域名字">
+</form>
+
+表单元素：在表单域中可以定义各种表单元素，这些表单元素就是允许用户在表单中输入或者选择的内容控件
+input输入表单元素  //定义一个输入表单
+select下拉表单元素 //定义一个下拉表单
+textarea文本域元素  //定义一个文本域表单
+
+input标签是一个单标签，是输入的意思，在表单元素中用来收集用户信息
+<input type="属性值">
+在input标签中，包含一个type属性，这个type是用来根据不同的type属性来选择各种形式的控件（可以是文本字段，复选框，按钮）
+text文本 
+ button按钮  //如果按钮在表单里面，默认是提交按钮，但是写了type='button'就是普通按钮
+ checkbox复选框
+ file 输入字段和"浏览"按钮，供文件上传
+hidden 隐藏输入字段 
+ image图片形式的提交按钮 
+password密码字段
+radio单选按钮  
+reset重置按钮会清除表单中的所有数据 
+submit提交按钮会把表单数据发送到服务器
+
+ input除了type属性外还有
+disabled 让按钮改为不可点击状态true是不可点击，false是可以点击
+name定义input元素名，单选框和复选框要有相同的name值；
+value规定input元素的值，在text文本中可以看到直接效果，其他的都是传给后台 ,
+checked规定input元素首次加载时应当被选中，主要针对单选按钮和复选按钮，默认选择 checked="checked"
+maxlength规定输入字段中字符的最大长度  maxlength="长度"
+placeholder是框没字的时候显示的内容
+
+<label></label>标签为input元素定义标注
+label标签用于绑定一个表单元素，当点击label标签内的文本时，浏览器就会自动将焦点（光标）转到或者选择对应的表单元素上，用来增加用户体验
+语法：
+<label for="sex">要点击的内容</label>
+<input type="radio"name=""id="sex">
+label标签的for属性要和相关元素的id属性相同
+
+
+<select>表单元素：
+有多个选项选择是，想要节省网页空间，就可以使用select标签定义下拉列表
+select语法：
+<select>
+        <option>选项1</option>
+        <option>选项2</option>
+        <option>选项3</option>
+</select>
+在option中定义selected="selected"时，当前项默认选中项
+
+
+<textarea>表单元素：
+当用户输入内容较多的情况下，就不能使用文本框表单了，要用<textarea>
+textarea标签是用于多行文本输入的控件
+使用多行文本输入控件，可以输入更多的文字，该控件常见于留言板，评论
+textarea语法：
+<textarea name="#" id="" cols="30" rows="10">   //框的大小cols是框的列  rows是框的行
+                
+</textarea>
+
+
+<!-- action 要提交的到哪里-->  <!--method用什么方式传送-->
+    <form action="form.js" method="POST"name="名字">
+        <div>
+            <label>你的名字</label><!--标注-->
+            <!--type 是选择框的形式-->   <!--name是用什么名字传输--> <!--placeholder是框里的字-->
+            <input type="text" name="name"placeholder="输入你的名字">
+            <label>你的性别</label>
+            <input type="radio" name="sex">男
+            <input type="radio" name="sex">女
+            <input type="email" name="email" placeholder="你的邮箱">
+        </div>
+        <input type="submit" name="submit" value="按钮">
+    </form>
+
+ HTML5 新增的表单属性：
+required=required  //表单拥有该属性表示其内容不能为空，必填
+placeholder=""  //提示信息，框里的信息，输入内容会自动消失
+autofocus=autofocus  //自动聚焦属性，页面加载完成自动聚焦到指定表单
+autocomplete=off/on  //当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项，默认已经打开on 关闭off ，需要放在表单内，同时加上name属性，同时成功提交
+multiple=multiple //配合文件文本，可以多选文件提交
+可以通过以下设置方式修改placeholder里面的字体颜色：
+input::placeholder {
+ color: ;
+ }
