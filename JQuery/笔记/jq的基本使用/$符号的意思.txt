@@ -1,0 +1,3 @@
+$符号是jquery的别称，也可以写jQuery
+
+$是jQuery的顶级对象，相当于原生js中的window，把元素利用$包装成jQuery对象，就可以调用jQuery的方法了

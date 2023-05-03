@@ -1,0 +1,15 @@
+1.5 jQuery筛选方法(重点)
+
+语法			用 法			说明
+parent()			$("li").parent();		查找父级
+parents(‘选择器’) 		$("li").parents();		可以返回指定祖先元素
+children(selector)		$("ul").children("li")		相当于$("ul>li"),最近一级(亲儿子)
+find(selector)		$("ul").find("li");		相当于$("ulli"),后代选择器
+siblings(selector)		$(".first").siblings("li");	查找兄弟节点，不包括自己本身
+nextAll([expr])       		$(".first").nextAll()              	查找当前元素之后的所有的同辈元素
+prevtAll([expr])		$(".last").prevAll()		查找当前元素之前所有的同辈元素
+hasClass(class)		$('div').hasClass("protected")	检查当前的元素是否含有某个特定的类，如 果有，则返回true
+eg(index)			$("li").eq(2);		相当于$("li:eq(2)"),index从0开始
+
+重点记住： parent()children()find()siblings() eq()
+parents(‘选择器’) 可以返回指定祖先元素

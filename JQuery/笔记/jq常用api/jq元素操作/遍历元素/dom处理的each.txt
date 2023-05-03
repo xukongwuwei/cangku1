@@ -1,0 +1,4 @@
+$("div").each(function (index, domEle) { xxx; }）
+1. each() 方法遍历匹配的每一个元素。主要用DOM处理。 each 每一个
+2. 里面的回调函数有2个参数： index 是每个元素的索引号; demEle 是每个DOM元素对象，不是jquery对象
+3. 所以要想使用jquery方法，需要给这个dom元素转换为jquery对象 $(domEle)

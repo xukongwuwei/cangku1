@@ -1,0 +1,7 @@
+hover([over,]out)
+（1）over:鼠标移到元素上要触发的函数（相当于mouseenter）  鼠标经过
+（2）out:鼠标移出元素要触发的函数（相当于mouseleave）   鼠标离开
+（3）如果只写一个函数，则鼠标经过和离开都会触发它
+
+
+$('选择器').hover(function(){},function(){})

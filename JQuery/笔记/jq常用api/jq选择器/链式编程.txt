@@ -1,0 +1,2 @@
+链式编程是为了节省代码量，看起来更优雅。
+$(this).css('color', 'red').sibling().css('color', '');

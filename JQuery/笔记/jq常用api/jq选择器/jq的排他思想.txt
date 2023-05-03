@@ -1,0 +1,3 @@
+想要多选一的效果，排他思想：当前元素设置样式，其余的兄弟元素清除样式。
+$(this).css(“color”,”red”);
+$(this).siblings(). css(“color”,””)

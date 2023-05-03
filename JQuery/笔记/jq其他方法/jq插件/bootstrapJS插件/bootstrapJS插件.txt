@@ -1,0 +1,2 @@
+bootstrap JS 插件：
+bootstrap 框架也是依赖于 jQuery 开发的，因此里面的 js插件使用 ，也必须引入jQuery 文件

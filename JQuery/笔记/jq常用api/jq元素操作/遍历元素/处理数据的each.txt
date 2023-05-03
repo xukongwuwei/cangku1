@@ -1,0 +1,3 @@
+$.each(object，function (index, element) { xxx; }）
+1. $.each()方法可用于遍历任何对象。主要用于数据处理，比如数组，对象
+2. 里面的函数有2个参数： index 是每个元素的索引号; element 遍历内容

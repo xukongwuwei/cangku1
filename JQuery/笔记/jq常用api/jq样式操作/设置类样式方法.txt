@@ -1,0 +1,13 @@
+作用等同于以前的 classList，可以操作类样式， 注意操作类里面的参数不要加点。
+1. 添加类
+$(“div”).addClass(''current'');
+2. 移除类
+$(“div”).removeClass(''current'');
+3. 切换类
+$(“div”).toggleClass(''current'');
+
+
+
+类操作与className区别
+原生 JS 中 className 会覆盖元素原先里面的类名。
+jQuery 里面类操作只是对指定类进行操作，不影响原先的类名。

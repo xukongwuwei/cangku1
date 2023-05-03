@@ -1,0 +1,10 @@
+：7.jQuery尺寸、位置操作
+黑马程序员www.itheima.com 传智播客旗下高端IT教育品牌
+7.1 jQuery 尺寸
+语法				用法
+width()/height()			取得匹配元素宽度和高度值只算width/height
+innerWidth()/innerHieght()		取得匹配元素宽度和高度值包含padding
+outerWidth()/ outerHeight()		取得匹配元素宽度和高度值包含padding、border
+outerWidth(true)/outerHeight(true)	取得匹配元素宽度和高度值包含padding、borde、margin
+
+●以上参数为空，则是获取相应值，返回的是数字型。●如果参数为数字，则是修改相应值。●参数可以不必写单位。

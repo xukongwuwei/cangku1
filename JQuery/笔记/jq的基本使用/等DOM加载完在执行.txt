@@ -1,0 +1,12 @@
+如果jq写在dom前面，入口函数
+
+第一种
+$(document).ready(function(){
+jq代码
+})
+
+
+第二种
+$(function(){
+jq代码
+})
