@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪导航</title>
+    <style>
+        div {
+            border-top: 5px solid orange;
+            border-bottom: 1px solid #e2dcdc;
+            height: 41px;
+            line-height: 41px;
+
+        }
+
+        a {
+            /* 因为a链接是行内元素，不能修改宽高，所以要改成可以一行多个并且可以改宽高的行内块元素 */
+            display: inline-block;
+            /* 去掉下划线 */
+            text-decoration: none;
+
+            padding: 0px 20px;
+            color: darkgray;
+            /* 没加字体大小 */
+            font-size: 12px;
+            height: 41px;
+        }
+
+        a:hover {
+            color: yellow;
+            /* 我少了一个背景颜色 */
+            background-color: #e2dcdc;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#">新浪导航</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">移动客户端</a>
+        <a href="#">微博</a>
+        <a href="#">三个字</a>
+    </div>
+</body>
+
+</html>

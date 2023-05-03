@@ -1,0 +1,29 @@
+ 维护 css 的弊端
+CSS 是一门非程序式语言，没有变量、函数、SCOPE（作用域）等概念。
+ CSS 需要书写大量看似没有逻辑的代码，CSS 冗余度是比较高的。
+ 不方便维护及扩展，不利于复用。
+ CSS 没有很好的计算能力
+ 非前端开发工程师来讲，往往会因为缺少 CSS 编写经验而很难写出组织良好且易于维护的 CSS 代码项目。
+
+ Less 介绍
+Less （Leaner Style Sheets 的缩写） 是一门 CSS 扩展语言，也成为CSS预处理器。
+做为 CSS 的一种形式的扩展，它并没有减少 CSS 的功能，而是在现有的 CSS 语法上，为CSS加入程序式语言的
+特性。
+它在 CSS 的语法基础之上，引入了变量，Mixin（混入），运算以及函数等功能，大大简化了 CSS 的编写，并且
+降低了 CSS 的维护成本，就像它的名称所说的那样，Less 可以让我们用更少的代码做更多的事情。
+Less中文网址： http://lesscss.cn/
+常见的CSS预处理器：Sass、Less、Stylus
+一句话：Less 是一门 CSS 预处理语言，它扩展了CSS的动态特性
+
+ Less 安装（注意如果使用vscode无需安装less）
+① 安装nodejs，可选择版本(8.0)，网址：http://nodejs.cn/download/
+② 检查是否安装成功，使用cmd命令（win10 是 window +r 打开 运行输入cmd） --- 输入“ node –v ”查看版本即可
+③ 基于nodejs在线安装Less，使用cmd命令“ npm install -g less ”即可
+④ 检查是否安装成功，使用cmd命令“ lessc -v ”查看版本即可
+
+ vocode Less 插件
+Easy LESS 插件用来把less文件编译为
+css文件
+安装完毕插件，重新加载下 vscode。
+只要保存一下Less文件，会自动生成CSS
+文件。

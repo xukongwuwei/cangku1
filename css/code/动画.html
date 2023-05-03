@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0% {}
+
+            25% {
+                width: 30px;
+                height: 30px;
+            }
+
+            50% {
+                width: 60px;
+                height: 60px;
+            }
+
+            75% {
+                width: 90px;
+                height: 90px;
+            }
+
+            100% {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            background: url(../image/map.png)no-repeat rgba(41, 40, 40, 0.904);
+            margin: 100px auto;
+        }
+
+        .city {
+            position: absolute;
+            top: 230px;
+            right: 189px;
+            width: 8px;
+            height: 8px;
+            background-color: #3ae6dd;
+            border-radius: 50%;
+        }
+
+        .tb {
+            top: 500px;
+            right: 80px;
+        }
+
+        .gz {
+            top: 536px;
+            right: 177px;
+        }
+
+        .city div[class^="bian"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+
+            animation: move 3s linear 0s infinite;
+        }
+
+        .city div.bian2 {
+            animation-delay: 1s;
+        }
+
+        .city div.bian3 {
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="bian1"></div>
+            <div class="bian2"></div>
+            <div class="bian3"></div>
+        </div>
+        <div class="city tb">
+            <div class="bian1"></div>
+            <div class="bian2"></div>
+            <div class="bian3"></div>
+        </div>
+        <div class="city gz">
+            <div class="bian1"></div>
+            <div class="bian2"></div>
+            <div class="bian3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

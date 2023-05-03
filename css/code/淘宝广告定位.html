@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tb-promo {
+            position: relative;
+            margin: 100px auto;
+            width: 520px;
+            height: 275px;
+            background-image: url(../image/tb.jpg);
+        }
+
+        .lef_t {
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-decoration: none;
+            border-radius: 0 20px 20px 0;
+            background-color: #fff1aa;
+        }
+
+        .righ_t {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 20px 0px 0px 20px;
+            text-decoration: none;
+            background-color: #fff;
+        }
+
+        ul {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 10px;
+            background-color: rgba(255, 255, 0, 0.3);
+            border-radius: 7px;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            margin: 3px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        ul .selected {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- //有一个大盒子里面放一张背景图片
+    大盒子里面左右两边各有一个盒子
+    大盒子最低端有一个盒子 -->
+    <div class="tb-promo">
+        <a href="#" class="lef_t">&lt </a>
+        <a href="#" class="righ_t">&gt</a>
+        <ul>
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

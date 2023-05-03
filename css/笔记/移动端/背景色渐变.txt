@@ -1,0 +1,7 @@
+背景线性渐变
+语法1：
+background: linear-gradient(起始方向, 颜色1, 颜色2, ...);
+background: -webkit-linear-gradient(left, red , blue);
+background: -webkit-linear-gradient(left top, red , blue);
+背景渐变必须添加浏览器私有前缀
+起始方向可以是： 方位名词 或者 度数 ， 如果省略默认就是 top

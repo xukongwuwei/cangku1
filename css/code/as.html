@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position定位</title>
+    <style>
+        body {
+            padding: 100px;
+            height: 2000px;
+        }
+
+        .box>div {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            border: 2px solid black;
+        }
+
+        .a {
+            background-color: cadetblue;
+        }
+
+        .b {
+            background-color: chocolate;
+        }
+
+        .c {
+            background-color: cornflowerblue;
+        }
+
+        .box4 {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            background-color: darkkhaki;
+            clear: both;
+            /* 设置粘性定位 */
+            position: sticky;
+            top: 50px;
+            /* 当距离父容器顶部50px时候，转换为固定定位 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="a">盒子1</div>
+        <div class="b">盒子2</div>
+        <div class="c">盒子3</div>
+    </div>
+    <div class="box4">
+        盒子4，采用sticky粘性定位
+    </div>
+</body>
+
+</html>

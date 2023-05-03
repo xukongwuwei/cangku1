@@ -1,0 +1,13 @@
+favicon.ico 一般用于作为缩略的网站标志，它显示在浏览器的地址栏或者标签上。
+目前主要的浏览器都支持 favicon.ico 图标。
+一、制作favicon图标
+二、favicon图标放到网站根目录下
+三、 HTML页面引入favicon图标
+
+制作favicon图标
+1. 把品优购图标切成 png 图片。
+2. 把 png 图片转换为 ico 图标，这需要借助于第三方转换网站，例如比特虫：http://www.bitbug.net/
+
+HTML页面引入favicon图标
+在html 页面里面的 <head> </head>元素之间引入代码。
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>

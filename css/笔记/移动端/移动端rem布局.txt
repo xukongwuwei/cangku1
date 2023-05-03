@@ -1,0 +1,179 @@
+1. 页面布局文字能否随着屏幕大小变化而变化？
+2. 流式布局和flex布局主要针对于宽度布局，那高度如何设置？
+3. 怎么样让屏幕发生变化的时候元素高度和宽度等比例缩放？
+
+ rem 基础
+rem 单位
+rem (root em)是一个相对单位，类似于em，em是父元素字体大小。
+不同的是rem的基准是相对于html元素的字体大小。
+比如，根元素（html）设置font-size=12px; 非根元素设置width:2rem; 则换成px表示就是24px。
+rem的优势：父元素文字大小可能不一致， 但是整个页面只有一个html，可以很好来控制整个页面的元素大小
+。
+/* 根html 为 12px */
+html {
+ font-size: 12px;
+}
+/* 此时 div 的字体大小就是 24px */ 
+div {
+ font-size: 2rem;
+}
+
+媒体查询
+媒体查询（Media Query）是CSS3新语法。
+ 使用 @media 查询，可以针对不同的媒体类型定义不同的样式
+ @media 可以针对不同的屏幕尺寸设置不同的样式
+ 当你重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面
+ 目前针对很多苹果手机、Android手机，平板等设备都用得到多媒体查询
+
+语法规范
+@media mediatype and|not|only (media feature) {
+ CSS-Code;
+}
+ 用 @media 开头 注意@符号
+ mediatype 媒体类型
+ 关键字 and not only
+ media feature 媒体特性 必须有小括号包含
+
+ mediatype 查询类型
+值 解释说明
+all 用于所有设备
+print 用于打印机和打印预览
+screen 用于电脑屏幕，平板电脑，智能手机等
+将不同的终端设备划分成不同的类型，称为媒体类型
+
+关键字
+关键字将媒体类型或多个媒体特性连接到一起做为媒体查询的条件。
+and：可以将多个媒体特性连接到一起，相当于“且”的意思。
+ not：排除某个媒体类型，相当于“非”的意思，可以省略。
+ only：指定某个特定的媒体类型，可以省略
+
+媒体特性
+每种媒体类型都具体各自不同的特性，根据不同媒体类型的媒体特性设置不同的展示风格。我们暂且了解三个。
+注意他们要加小括号包含
+width 定义输出设备中页面可见区域的宽度
+min-width 定义输出设备中页面最小可见区域宽度
+max-width 定义输出设备中页面最大可见区域宽度
+
+媒体查询+rem实现元素动态大小变化
+rem单位是跟着html来走的，有了rem页面元素可以设置不同大小尺寸
+媒体查询可以根据不同设备宽度来修改样式
+媒体查询+rem 就可以实现不同设备宽度，实现页面元素大小的动态变化
+
+引入资源（理解）
+当样式比较繁多的时候，我们可以针对不同的媒体使用不同 stylesheets（样式表）。
+原理，就是直接在link中判断设备的尺寸，然后引用不同的css文件。
+语法规范
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+. 示例
+<link rel="stylesheet" href="styleA.css" media="screen and (min-width: 400px)">
+
+rem 适配方案
+1. 我们适配的目标是什么？
+2. 怎么去达到这个目标的？
+3. 在实际的开发当中使用？
+1. 让一些不能等比自适应的元素，达到当设备尺寸发生改变的时
+候，等比例适配当前设备。
+2. 使用媒体查询根据不同设备按比例设置html的字体大小，然后
+页面元素使用rem做尺寸单位，当html字体大小变化元素尺寸
+也会发生变化，从而达到等比缩放的适配。
+
+ rem 实际开发适配方案
+① 按照设计稿与设备宽度的比例，动态计算并设置 html 根标签的 font-size 大小；（媒体查询）
+② CSS 中，设计稿元素的宽、高、相对位置等取值，按照同等比例换算为 rem 为单位的值； rem 适配方案技术使用（市场主流）
+4. rem 适配方案
+技术方案1
+ less
+ 媒体查询
+ rem
+技术方案2（推荐）
+ flexible.js
+ rem
+总结：
+1. 两种方案现在都存在。
+2. 方案2 更简单，现阶段大家无需了解里面的js代码。
+
+rem + 媒体查询 + less 技术
+ 设计稿常见尺寸宽度
+设备 常见宽度
+iphone 4.5 640px
+iphone 678 750px
+Android 常见320px、360px、375px、384px、400px、414px、500px、720px
+大部分4.7~5寸的安卓设备为720px
+一般情况下，我们以一套或两套效果图适应大部分的屏幕，放弃极端屏或对其优雅降级，牺牲一些效果
+现在基本以750为准。
+2. 动态设置 html 标签 font-size 大小
+① 假设设计稿是750px
+② 假设我们把整个屏幕划分为15等份（划分标准不一可以是20份也可以是10等份）
+③ 每一份作为html字体大小，这里就是50px
+④ 那么在320px设备的时候，字体大小为320/15 就是 21.33px
+⑤ 用我们页面元素的大小 除以不同的 html 字体大小会发现他们比例还是相同的
+⑥ 比如我们以 750为标准设计稿
+⑦ 一个100*100像素的页面元素 在 750屏幕下， 就是 100 / 50 转换为rem 是 2rem * 2 rem 比例是 1比1
+⑧ 320屏幕下， html 字体大小为 21.33 则 2rem = 42.66px 此时宽和高都是 42.66 但是 宽和高的比例还是 1比1
+⑨ 但是已经能实现不同屏幕下 页面元素盒子等比例缩放的效果
+3. 元素大小取值方法
+① 最后的公式： 页面元素的rem值 = 页面元素值（px） / （屏幕宽度 / 划分的份数）
+② 屏幕宽度/划分的份数 就是 html font-size 的大小
+③ 或者： 页面元素的rem值 = 页面元素值（px） / html font-size 字体大小
+
+1. 技术选型
+方案：我们采取单独制作移动页面方案
+技术：布局采取rem适配布局（less + rem + 媒体查询）
+设计图： 本设计图采用 750px 设计尺寸
+2. 搭建相关文件夹结构
+3. 设置视口标签以及引入初始化样式
+<meta name="viewport" content="width=device-width, user-scalable=no, 
+initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="css/normalize.css">
+4. 设置公共common.less文件
+1. 新建common.less 设置好最常见的屏幕尺寸，利用媒体查询设置不同的html字体大小，因为除了首页其他页面也需要
+2. 我们关心的尺寸有 320px、360px、375px、384px、400px、414px、424px、480px、540px、720px、750px
+3. 划分的份数我们定为 15等份
+4. 因为我们pc端也可以打开我们苏宁移动端首页，我们默认html字体大小为 50px，注意这句话写到最上面
+5. 新建index.less文件
+1. 新建index.less 这里面写首页的样式
+2. 将刚才设置好的 common.less 引入到index.less里面 语法如下：
+// 在 index.less 中导入 common.less 文件
+@import “common”
+3. 生成index.css 引入到 index.html 里面
+6. body样式
+body {
+min-width: 320px;
+width:15rem;
+margin: 0 auto;
+line-height: 1.5;
+font-family: Arial,Helvetica;
+background: #F2F2F2;
+}
+
+6.1 简洁高效的rem适配方案flexible.js
+手机淘宝团队出的简洁高效 移动端适配库
+我们再也不需要在写不同屏幕的媒体查询，因为里面js做了处理
+它的原理是把当前设备划分为10等份，但是不同设备下，比例还是一致的。
+我们要做的，就是确定好我们当前设备的html 文字大小就可以了
+比如当前设计稿是 750px， 那么我们只需要把 html 文字大小设置为 75px(750px / 10) 就可以
+里面页面元素rem值： 页面元素的px 值 / 75 
+剩余的，让flexible.js来去算
+github地址：https://github.com/amfe/lib-flexible
+1. 技术选型
+方案：我们采取单独制作移动页面方案
+技术：布局采取rem适配布局2（flexible.js + rem）
+设计图： 本设计图采用 750px 设计尺寸
+2. 搭建相关文件夹结构
+3. 设置视口标签以及引入初始化样式还有js文件
+<meta name="viewport" content="width=device-width, user-scalable=no, 
+initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/index.css">
+我们页面需要引入 这个js文件
+在 index.html 中 引入 flexible.js 这个文件
+<script src=“js/flexible.js”> </script>
+4. body样式
+body {
+min-width: 320px;
+width:15rem;
+margin: 0 auto;
+line-height: 1.5;
+font-family: Arial,Helvetica;
+background: #F2F2F2;
+}

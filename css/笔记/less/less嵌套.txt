@@ -1,0 +1,25 @@
+ Less 嵌套
+我们经常用到选择器的嵌套
+#header .logo {
+ width: 300px;
+}
+
+Less 嵌套写法
+#header {
+ .logo {
+ width: 300px;
+ }
+}
+
+如果遇见 （交集|伪类|伪元素选择器）
+内层选择器的前面没有 & 符号，则它被解析为父选择器的后代；
+如果有 & 符号，它就被解析为父元素自身或父元素的伪类。
+a:hover{
+ color:red;
+}
+Less 嵌套写法
+a{
+ &:hover{
+ color:red;
+ }
+}	

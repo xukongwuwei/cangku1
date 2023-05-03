@@ -1,0 +1,17 @@
+官网：  https://www.swiper.com.cn/
+使用方法官网也有
+1.首先加载插件，需要用到的文件有swiper-bundle.min.js和swiper-bundle.min.css文件，不同Swiper版本用到的文件名略有不同。可下载Swiper文件或使用CDN
+
+2.添加HTML内容。Swiper7的默认容器是'.swiper'，Swiper6之前是'.swiper-container'。
+
+3.你可能想要给Swiper定义一个大小，当然不要也行。
+
+4.初始化Swiper。
+
+5.完成。恭喜你，现在你的Swiper应该已经能正常切换了。
+
+如果作为CommonJs 或ES 模块引入
+
+
+
+在线演示 找到符合要求的， 在新窗口打开  检查网页源代码  复制粘贴html结构  css样式 js语法   然后根据自己的需求修改

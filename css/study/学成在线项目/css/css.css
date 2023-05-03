@@ -1,0 +1,358 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    height: 100000000px;
+    background-color: #f3f5f7;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 100px;
+
+
+}
+
+.logo {
+    float: left;
+    /* width: 196px; */
+    height: 43px;
+    padding-top: 30px;
+    margin-right: 70px;
+}
+
+.nav {
+    float: left;
+}
+
+.nav ul li {
+    float: left;
+    margin-top: 42px;
+
+    font-size: 18px;
+    margin-right: 30px;
+
+}
+
+.nav ul li a {
+    padding: 21px 10px;
+    color: black;
+}
+
+.nav ul li a:hover {
+    border-bottom: 3px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.search {
+    float: left;
+}
+
+.searchbaby {
+    float: left;
+    width: 360px;
+    height: 40px;
+    margin-top: 30px;
+    border-color: #00a4ff;
+    border-right: none;
+    margin-left: 55px;
+}
+
+.searchbutton {
+    float: left;
+    margin-top: 30px;
+    width: 50px;
+    height: 44px;
+    border: none;
+    background-image: url(../img/fa-search.png);
+}
+
+.user {
+
+    float: right;
+    line-height: 100px;
+    margin-right: 35px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.userimg {
+    vertical-align: middle;
+}
+
+.bigbox {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.bg {
+    height: 420px;
+    background-image: url(../img/banner2.png);
+}
+
+.bg .caidan {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background-color: #14024b;
+}
+
+.bg .caidan ul li {
+    height: 44px;
+    line-height: 44px;
+    color: #c4c0d2;
+}
+
+.bg .caidan ul li a {
+    float: left;
+    margin-left: 20px;
+    color: #c4c0d2;
+}
+
+.bg .caidan ul li span {
+    float: right;
+    margin-right: 20px;
+}
+
+.bg .kechengbiao {
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+.bg .kechengbiao h3 {
+
+    height: 48px;
+    padding-left: 65px;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #9bceea;
+}
+
+.bg .kechengbiao li {
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-right: 20px;
+
+    border-bottom: 1px solid #eaeaea;
+}
+
+.bg .kechengbiao li span {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 12px;
+
+}
+
+.quanbukecheng {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 14px;
+    text-align: center;
+    border: 2px solid #00a4ff;
+
+    background-color: #ffffff;
+}
+
+.quanbukecheng a {
+    display: block;
+    color: #00a4ff;
+}
+
+/* 精品推荐 */
+.tuijian {
+    height: 60px;
+    margin-top: 8px;
+    background-color: #ffffff;
+}
+
+.tuijian span {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 35px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.tuijian .tuijian1 {
+    float: left;
+}
+
+.tuijian .tuijian1 ul {
+
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.tuijian .tuijian1 ul li {
+    float: left;
+    border-left: 1px solid #bfbfbf;
+    padding: 0 35px;
+
+}
+
+.tuijian .tuijian1 ul li a {
+    color: #050505;
+}
+
+.xiugai {
+    float: right;
+    margin-top: 24px;
+}
+
+.xiugai a {
+    color: #42b2ff;
+}
+
+/* 第三部分 */
+.classtuijian .classbox {
+    width: 1230px;
+}
+
+.classtuijian .classbox div {
+    position: relative;
+    float: left;
+    width: 228px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 5px 15px 10px 10px #06c; */
+}
+
+.classtuijian .classbox div .tupian {
+    width: 100%;
+}
+
+.classtuijian .classbox div span .p1 {
+    float: left;
+    color: #050505;
+    font-size: 14px;
+}
+
+.classtuijian .classbox div span h4 {
+    float: left;
+    color: #ffbd96;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.classtuijian .classbox div span .p2 {
+    float: left;
+    font-size: 12px;
+    color: #c0c0c0;
+}
+
+
+.dingwei {
+    position: absolute;
+    top: 5px;
+    right: -7px;
+
+}
+
+/* 结尾 */
+
+.end {
+    margin-top: 38px;
+    height: 420px;
+    background-color: #ffffff;
+}
+
+.end1 {
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.end .wenzi {
+    margin-top: 25px;
+    color: #666;
+    font-size: 12px;
+}
+
+.end a {
+    display: block;
+    width: 120px;
+    height: 35px;
+    margin-top: 18px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.end2 {
+    float: right;
+    margin-top: 35px;
+    margin-right: 30px;
+    color: #333333;
+}
+
+.end2 dl {
+    float: right;
+    margin-left: 100px;
+}
+
+.end2 dl dd {
+    font-size: 12px;
+}
+
+.jueduidingwei1 {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    margin-left: 600px;
+}
+
+.jueduidingwei2 {
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+
+.nianxing {
+    position: sticky;
+    top: 80px;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+/* .searchbaby:focus {
+    outline: none;
+    color: #da1d1d;
+    border: 2px solid #00a4ff
+} */

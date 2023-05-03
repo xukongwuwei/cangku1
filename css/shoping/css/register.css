@@ -1,0 +1,55 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #b1191a;
+}
+
+.logo {
+    height: 85px;
+    margin-top: 16px;
+}
+
+.w1 {
+    height: 41px;
+    line-height: 41px;
+    padding-left: 12px;
+    background-color: #ececec;
+}
+
+.w2 {
+    float: right;
+}
+
+.w3 {
+    float: right;
+}
+
+.w3 a {
+    float: right;
+    color: red;
+}
+
+ul {
+    margin-top: 54px;
+    margin-left: 318px;
+
+}
+
+ul li i {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+ul li input {
+    width: 240px;
+    height: 36px;
+
+}

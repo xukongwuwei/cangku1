@@ -1,0 +1,105 @@
+
+body{/*也可以用body对body进行操作*/
+    background-color:rgb(199, 170, 132);/*背景颜色*/
+    color:rgb(124, 56, 187);/*color是字体颜色*/
+/*font-family是选择字体*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;/*字体大小*/
+    font-weight:normal ;/*字体宽度  normal是正常宽度*/
+
+    font:normal 16px Arial,Helvetica,sans-serif;
+    /*字体宽度   字体大小   字体类型*/
+    line-height: 2em;/*行高*/
+}
+
+.box1{
+    background-color:antiquewhite;/*背景颜色*/
+    color:blue;/*color是字体颜色*/
+    border: 5px rgb(37, 34, 34)solid;/*solid实体化*/
+    }
+.box1 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-style: italic;/*字体风格*/
+    text-decoration: underline;/*加下划线*/
+    text-transform:lowercase;/*字母大小写*/
+    letter-spacing: 1em;/*字间距*/
+    word-spacing: 2em;/*词间距*/
+}
+.container{
+    width:80%;/*占据的宽度*/
+    margin:auto;/*margin是边距auto是自适应*/
+}
+.box2{
+    border: 5px dotted #4654;
+}
+.box2 h1{
+    text-align: center;/*文本   排列   到中间*/
+}
+.list li{
+    list-style-image: url(../image/图片1.jpg);/*一个.就是返回一次*/
+}
+button{
+    background-color: #4654;
+    color: aqua;
+    padding: 10px 15px;
+}
+/*hover 徘徊，鼠标放在上面的意思*/
+button:hover{
+    color: tomato;
+    background-color: burlywood;
+}
+/*active  鼠标按下的状态*/
+button:active{
+    background-color: blueviolet;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+a:hover{
+    color: rgb(21, 205, 211);
+}
+a:visited{/*访问过*/
+    color:crimson;
+}
+.box3{
+    float:left;
+    width: 33.3%;
+    border: 1px solid rgb(199, 16, 117);
+    box-sizing: border-box;
+    position: absolute;/*relative相对定位，保留原来的位置*/
+    /*absolute 绝对偏移，不保留原来的位置*/
+    top: 20px;
+    left: 30px;
+    
+}
+#box4{
+    float: left;
+    width: 50%;
+}
+#box5{
+    float: right;
+    width: 50%;
+}
+.clearfix{
+    clear:both;
+}
+.list10 li:nth-child(even){
+    background-color: bisque;
+}
+.position-box{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+}
+.position-box h1{
+    position: absolute;
+    top: 5em;
+}
+#button1{
+    position: fixed;/*固定位置*/
+    right: 0;/*离右边0距离*/
+    bottom: 0;/*离底部0距离*/
+}

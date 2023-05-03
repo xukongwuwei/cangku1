@@ -1,0 +1,76 @@
+准备工作：  需要下载git软件    需要码云注册账号
+
+git 可以把我们的本地网站提交上传到远程仓库（码云 gitee）里面    类似以前的   ftp  
+
+码云  就是远程仓库， 类似服务器 
+
+1. 码云创建新的仓库。   heimamm  
+
+2. 利用git 提交 把本地网站提交到 码云新建的仓库里面
+
+   - 在网站根目录右键-- Git Bash Here
+
+   - 如果是第一次利用git提交，请配置好全局选项
+
+     ~~~javascript
+     git config --global user.name "用户名"
+     git config --global user.email "你的邮箱地址"
+     ~~~
+
+   - 初始化仓库
+
+     ~~~javascript
+     git init
+     ~~~
+
+   - 把本地文件放到暂存区
+
+     ~~~javascript
+     git add .
+     ~~~
+
+   - 把本地文件放到本地仓库里面
+
+     ~~~javascript
+     git commit -m '提交黑马面面网站'
+     ~~~
+
+   - 链接远程仓库
+
+     ~~~javascript
+     git remote add origin 你新建的仓库地址
+     ~~~
+
+   - 把本地仓库的文件推送到远程仓库 push
+
+     ~~~javascript
+     git push -u origin master
+     ~~~
+
+3. 码云部署发布静态网站
+
+   - 在当前仓库中，点击  “服务”   菜单 
+
+     ![59333600753](C:\Users\kandy\AppData\Local\Temp\1593336007530.png)
+
+   - 选择 Gitee Pages
+
+      ![59333604301](C:\Users\kandy\AppData\Local\Temp\1593336043016.png)
+
+   - 选择 “启动” 按钮
+
+      ![59333609181](C:\Users\kandy\AppData\Local\Temp\1593336091814.png)
+
+   - 稍等之后，会拿到地址，就可以利用这个地址来预览网页了![59333616429](C:\Users\kandy\AppData\Local\Temp\1593336164295.png)
+
+   - 当然你也可以利用  草料二维码 生成二维码    <https://cli.im/>
+
+     ![59333634981](C:\Users\kandy\AppData\Local\Temp\1593336349811.png)
+
+最后： 如果提交网站，你不愿意用git 提交， 可以直接找到仓库，里面有文件，选择上传本地文件即可。
+
+ ![59333642656](C:\Users\kandy\AppData\Local\Temp\1593336426566.png)
+
+![59333645048](C:\Users\kandy\AppData\Local\Temp\1593336450481.png)
+
+但是，1个小时内，只能上传 20个以内的文件， 前端人员，git必备技能

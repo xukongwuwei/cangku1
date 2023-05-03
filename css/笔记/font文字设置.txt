@@ -1,0 +1,32 @@
+font属于用于定义字体系列，大小，粗细，文字样式（如斜体）
+
+字体系列
+使用font-family属性定义文本的字体系列
+body {font-family: Arial,"Microsoft Yahei","微软雅黑"}//先第一个，第一个兼容失败继续第二个，都失败就系统默认字体
+
+各个字体之间必须使用英文状态下的,逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号
+尽量使用系统默认的字体，保证所有用户都能使用
+最常见的几个字体：'Microsoft YaHei',tahoma,arial,'Hiragion Sans GB'
+
+字体大小
+font-size:大小px；
+最好设置一个大小给body
+
+字体粗细
+font-weight: 700;     //700效果等同于加粗
+font-weight: 400;	//400效果等同于系统默认
+	    normal; 是默认
+
+
+文字样式
+fon-style: italic;  //改成斜体
+	normal；是默认
+
+
+字体复合属性
+字体复合可以让更节约代码
+body{
+	font: style weight sizi/line-height family; 
+        }  //以这样的格式写出来，顺序不能错，并且各个属性间以空格隔开
+不需要设置的属性可以省略（会取默认值），但是必须保留sizi和family属性，佛则font复合属性将不起作用

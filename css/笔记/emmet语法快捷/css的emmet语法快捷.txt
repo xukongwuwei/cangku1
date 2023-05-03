@@ -1,0 +1,4 @@
+css基本采用简写形式即可
+比如 w200 按tab 可以生成 width：200px;
+
+lh26 按tab 可以生成 line-height：26px;

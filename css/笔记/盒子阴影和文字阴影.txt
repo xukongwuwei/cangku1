@@ -1,0 +1,19 @@
+css3中新增了盒子阴影，我们可以使用box-shadow属性为盒子添加阴影
+语法：
+box-shadow: h-shadow v-shadow blur spread color inset;
+h-shadow//必需要有的，水平阴影的位置，允许负值 x轴正值是往右，负值是往左
+v-shadow//必需要有的，垂直阴影的位置，允许负值 y轴正值是往下，负值是往上
+blur  //可选项，模糊距离 影子是模糊的还是实的 越大越模糊，越小越实
+spread  //可选项，阴影的尺寸  影子的大小
+color  //可选项，阴影的颜色
+inset  //可选项，将外部阴影（outset）改为内部阴影，默认的是外阴影，但是不可以写这个单词，否则导致阴影无效
+盒子阴影不占用空间，不会影响其他盒子的排列
+
+
+文字阴影：
+在ccs3中，我们可以使用text-shadow 属性将阴影应用于文本
+text-shadow: h-shadow v-shadow blur color;
+h-shadow  //必需要有的，水平阴影的位置
+v-shadow //必需要有的，垂直阴影的位置
+blur //可选项，模糊距离
+color  //也遇到颜色

@@ -1,0 +1,3 @@
+在head部分直接写link.css
+会出来<link rel="stylesheet" href="./style.css">
+<!--link是引用外部文档 rel是关联的意思 后面的值是关联方式 href是来自什么位置-->

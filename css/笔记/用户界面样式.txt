@@ -1,0 +1,24 @@
+所谓的界面样式，就是更改一些用户操作样式，以便提高更好的用户体验。
+ 更改用户的鼠标样式
+ 表单轮廓
+ 防止表单域拖拽
+
+
+鼠标样式 cursor设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。
+语法：
+li {cursor: pointer; }
+default //默认
+pointer //小手
+move  //移动
+text  //文本
+not-allowed  //禁止
+
+轮廓线 outline
+给表单添加 outline: 0; 或者 outline: none; 样式之后，就可以去掉选定这个框之后默认的蓝色边框。
+语法：
+input {outline: none; }
+
+防止拖拽文本域 resize
+实际开发中，我们文本域右下角是不可以拖拽的。
+语法：
+textarea{ resize: none;}

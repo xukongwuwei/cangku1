@@ -1,0 +1,27 @@
+巧妙利用一个技术更快更好的布局：
+1.margin负值的运用
+2.文字围绕浮动元素
+3.行内块的巧妙运用
+4.CSS三角强化
+
+1. margin负值运用：
+1.让每个盒子margin 往左侧移动 -1px 正好压住相邻盒子边框
+2.鼠标经过某个盒子的时候，提高当前盒子的层级即可（如果没有有定位，则加相对定位（保留位置），如
+果有定位，则加z-index）
+
+2. 文字围绕浮动元素：
+巧妙运用浮动元素不会压住文字的
+特性
+
+3. 行内块巧妙运用：
+页码在页面中间显示:
+1. 把这些链接盒子转换为行内块， 之后给父级指定 text-align:center;
+2. 利用行内块元素中间有缝隙，并且给父级添加 text-align:center; 行内块元素会水平会居中
+
+4. CSS 三角强化：
+原理是三角形用定位覆盖，三角形用宽和高为0的盒子做的
+width: 0;
+height: 0;
+border-color: transparent red transparent transparent;
+border-style: solid;
+border-width: 22px 8px 0 0;

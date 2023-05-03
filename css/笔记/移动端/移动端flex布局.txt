@@ -1,0 +1,123 @@
+传统布局与flex布局
+传统布局
+ 兼容性好
+ 布局繁琐
+ 局限性，不能再移动端很好的布局
+
+flex 弹性布局
+ 操作方便，布局极为简单，移动端应用很广泛
+ PC 端浏览器支持情况较差
+ IE 11或更低版本，不支持或仅部分支持
+
+建议：
+1. 如果是PC端页面布局，我们还是传统布局。
+2. 如果是移动端或者不考虑兼容性问题的PC端页面布局，我们还是使用flex弹性布局
+
+ CSS样式
+① span 直接给宽度和高度，背景颜色，还有蓝色边框
+② 给 div 只需要添加 “display：flex” 即可
+
+布局原理
+flex 是 flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性，任何一个容器都可以
+指定为 flex 布局。
+ 当我们为父盒子设为 flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。
+ 伸缩布局 = 弹性布局 = 伸缩盒布局 = 弹性盒布局 =flex布局
+采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成
+员，称为 Flex 项目（flex item），简称"项目"。
+体验中 div 就是 flex父容器。
+ 体验中 span 就是 子容器 flex项目
+ 子容器可以横向排列也可以纵向排列
+总结flex布局原理：
+就是通过给父盒子添加flex属性，来控制子盒
+子的位置和排列方式
+
+ 常见父项属性
+以下由6个属性是对父元素设置的
+ flex-direction：设置主轴的方向
+ justify-content：设置主轴上的子元素排列方式
+ flex-wrap：设置子元素是否换行  align-content：设置侧轴上的子元素的排列方式（多行）
+ align-items：设置侧轴上的子元素排列方式（单行）
+ flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap
+
+flex-direction 设置主轴的方向
+ 主轴与侧轴
+在 flex 布局中，是分为主轴和侧轴两个方向，同样的叫法有 ： 行和列、x 轴和y 轴
+ 默认主轴方向就是 x 轴方向，水平向右
+ 默认侧轴方向就是 y 轴方向，水平向下
+属性值
+flex-direction 属性决定主轴的方向（即项目的排列方向）
+注意： 主轴和侧轴是会变化的，就看 flex-direction 设置谁为主轴，剩下的就是侧轴。而我们的子元素是跟着主轴来排列的
+row 默认值从左到右
+row-reverse 从右到左
+column 从上到下
+column-reverse 从下到上
+
+ justify-content 设置主轴上的子元素排列方式
+justify-content 属性定义了项目在主轴上的对齐方式
+注意： 使用这个属性之前一定要确定好主轴是哪个
+属性值 说明
+flex-start 默认值 从头部开始 如果主轴是x轴，则从左到右
+flex-end 从尾部开始排列
+center 在主轴居中对齐（如果主轴是x轴则 水平居中）
+space-around 平分剩余空间
+space-between 先两边贴边 再平分剩余空间（重要）
+
+flex-wrap 设置子元素是否换行
+默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。 属性值 说明
+nowrap 默认值，不换行
+wrap 换行
+
+ align-items 设置侧轴上的子元素排列方式（单行 ）
+该属性是控制子项在侧轴（默认是y轴）上的排列方式 在子项为单项（单行）的时候使用
+属性值 说明
+flex-start 从上到下
+flex-end 从下到上
+center 挤在一起居中（垂直居中）
+stretch 拉伸 （默认值 ）
+
+ align-content 设置侧轴上的子元素的排列方式（多行）
+设置子项在侧轴上的排列方式 并且只能用于子项出现 换行 的情况（多行），在单行下是没有效果的。 属性值 说明
+flex-start 默认值在侧轴的头部开始排列
+flex-end 在侧轴的尾部开始排列
+center 在侧轴中间显示
+space-around 子项在侧轴平分剩余空间
+space-between 子项在侧轴先分布在两头，再平分剩余空间
+stretch 设置子项元素高度平分父元素高度
+
+align-content 和 align-items 区别
+ align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸
+ align-content 适应于换行（多行）的情况下（单行情况下无效）， 可以设置 上对齐、 下对齐、居中、拉伸以及平均分
+配剩余空间等属性值。
+ 总结就是单行找 align-items 多行找 align-content
+
+flex-flow
+flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性
+flex-flow:row wrap;
+ flex-direction：设置主轴的方向
+ justify-content：设置主轴上的子元素排列方式
+ flex-wrap：设置子元素是否换行  align-content：设置侧轴上的子元素的排列方式（多行）
+ align-items：设置侧轴上的子元素排列方式（单行）
+ flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap
+
+ flex布局子项常见属性
+flex 子项目占的份数
+ align-self 控制子项自己在侧轴的排列方式
+ order属性定义子项的排列顺序（前后顺序）
+ flex 属性 ★
+flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。
+.item {
+ flex: <number>; /* default 0 */
+}
+align-self 控制子项自己在侧轴上的排列方式
+align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。
+默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。
+span:nth-child(2) {
+ /* 设置自己在侧轴上的排列方式 */
+ align-self: flex-end;
+ }
+ order 属性定义项目的排列顺序
+数值越小，排列越靠前，默认为0。
+注意：和 z-index 不一样。
+.item {
+ order: <number>;
+}

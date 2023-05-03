@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            float: left;
+
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            perspective: 500px;
+        }
+
+        .box {
+
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s;
+
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .top,
+        .bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+
+
+        .top {
+            background-color: #09f;
+
+            transform: translateZ(100px);
+        }
+
+        .bottom {
+            background-color: rgb(231, 20, 231);
+
+            transform: translateY(100px) rotateX(-90deg);
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="top">我是上面</div>
+                <div class="bottom">我是下面</div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

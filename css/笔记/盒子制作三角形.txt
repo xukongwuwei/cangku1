@@ -1,0 +1,10 @@
+div {
+ width: 0;
+ height: 0;
+ line-height: 0;
+ font-size: 0;
+ border: 50px solid transparent;
+ border-left-color: pink;
+}
+
+一条边有颜色，其他边透明色

@@ -1,0 +1,5 @@
+/* 页面滑动 */
+html {
+  /* 让滚动条丝滑的滚动 */
+  scroll-behavior: smooth;
+}

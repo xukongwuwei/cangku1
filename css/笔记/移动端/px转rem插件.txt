@@ -1,0 +1,8 @@
+VSCode px 转换rem 插件 cssrem
+
+设置html字体大小基准值
+1. 打开 设置 快捷键是 ctrl + 逗号
+
+cssroot
+
+设置html字体大小基准值  每份多少px
