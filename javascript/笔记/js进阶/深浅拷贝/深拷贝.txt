@@ -1,0 +1,29 @@
+首先浅拷贝和深拷贝只针对引用类型
+深拷贝：拷贝的是对象，不是地址
+常见方法：
+1. 通过递归实现深拷贝
+2. lodash/cloneDeep
+3. 通过JSON.stringify()实现
+
+常见方法：
+1. 通过递归实现深拷贝
+函数递归：
+如果一个函数在内部可以调用其本身，那么这个函数就是递归函数
+ 简单理解:函数内部自己调用自己, 这个函数就是递归函数
+ 递归函数的作用和循环效果类似
+ 由于递归很容易发生“栈溢出”错误（stack overflow），所以必须要加退出条件 return
+代码：
+ function copy(newObj, oldObj) {
+            for (let k in oldObj) {
+                if (oldObj[k] instanceof Array) {  //先写数组在写对象，因为万物皆对象
+                    newObj[k] = []
+                    copy(newObj[k], oldObj[k])
+                } else if (oldObj[k] instanceof Object) {
+                    newObj[k] = {}
+                    copy(newObj[k], oldObj[k])
+                } else {
+                    newObj[k] = oldObj[k]
+                }
+
+            }
+        }

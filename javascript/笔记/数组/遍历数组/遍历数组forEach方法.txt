@@ -1,0 +1,13 @@
+forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数,没有返回值
+
+语法：
+const str=' ' 
+数组.forEach(function(item,index){
+  str+=item
+ })
+
+一般用于拼接数组
+
+注意：
+1. forEach 主要是遍历数组
+2. 参数当前数组元素是必须要写的， 索引号可选

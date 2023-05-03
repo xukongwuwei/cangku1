@@ -1,0 +1,13 @@
+有行内，内部，外部
+
+
+行内：
+<标签  js指令>  </标签>
+
+
+内部：
+在/body前面写  <script>js</script>
+
+外部：
+在/body前面写  <script src="路径">js</script>
+

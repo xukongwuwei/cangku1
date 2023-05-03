@@ -1,0 +1,13 @@
+关键字 在JavaScript中有特殊意义的词汇
+let、var、function、if、else、
+switch、case、break
+保留字
+在目前的JavaScript中没意义，但未
+来可能会具有特殊意义的词汇
+int、short、long、char
+标识（标识符） 变量名、函数名的另一种叫法 无
+表达式
+能产生值的代码，一般配合运算符出
+现
+10 + 3、age >= 18
+语句 一段可执行的代码 If () for()

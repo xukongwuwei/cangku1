@@ -1,0 +1,25 @@
+location 的数据类型是对象，它拆分并保存了 URL 地址的各个组成部分
+常用属性和方法：
+href 属性获取完整的 URL 地址，对其赋值时用于地址的跳转
+语法：
+location.href='https：asdasd.com'
+
+
+search 属性获取地址中携带的参数，符号 ？后面部分
+一般用于表单提交之后网址会多出？ 表单的名字=值
+语法：
+location.search =？表单的名字=值
+
+
+hash 属性获取地址中的哈希值，符号 # 后面部分
+一般用于单页面，经常用于不刷新页面，显示不同页面，比如 网易云音乐
+vue路由
+语法：
+location.hash =# 某个页面的名字
+
+
+reload 方法用来刷新当前页面，传入参数 true 时表示强制刷新
+元素.addEventListener('click',function(){
+location.reload()  //这是刷新
+location.reload(true)   //这是强制刷新  类似ctrl+f5
+})

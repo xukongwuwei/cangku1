@@ -1,0 +1,5 @@
+在标签上一律以data-开头   data-自己取的名字='值'
+在DOM对象上一律以dataset对象方式获取
+元素名.dataset.自己定义的属性名
+
+e.target.dataset.自己定义的属性名

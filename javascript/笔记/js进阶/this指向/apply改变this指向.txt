@@ -1,0 +1,15 @@
+使用 apply 方法调用函数，同时指定被调用函数中 this 的值
+ 语法：
+fun.apply(thisArg, [argsArray])
+ thisArg：在fun函数运行时指定的 this 值
+ argsArray：传入函数的值，必须包含在数组里面
+ 返回值就是函数的返回值，因为它就是调用函数
+ 因此 apply 主要跟数组有关系，比如使用 Math.max() 求数组的最大值
+
+利用apply()求数组最大值
+Math.max.apply(null,arr)
+
+
+call和apply的区别是？
+ 都是调用函数，都能改变this指向
+ 参数不一样，apply传递的必须是数组

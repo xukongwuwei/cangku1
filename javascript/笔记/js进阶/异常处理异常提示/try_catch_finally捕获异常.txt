@@ -1,0 +1,19 @@
+我们可以通过try / catch 捕获错误信息（浏览器提供的错误信息） try 试试 catch 拦住 finally 最后
+总结：
+1. try...catch 用于捕获错误信息
+2. 将预估可能发生错误的代码写在 try 代码段中
+3. 如果 try 代码段中出现错误后，会执行 catch 代码段，并截获到错误信息
+4. finally 不管是否有错误，都会执行
+
+function fn () {
+try{
+	代码
+}catch(参数){
+ 	consolo.log(参数.message)  //获得浏览器的错误信息
+
+return
+}finally{
+	代码
+}
+
+}

@@ -1,0 +1,20 @@
+获取表单元素：
+document.querySelector('哪个表单和css选择器一样的操作')
+
+操作表单：
+元素名.属性名=新值
+举例：
+元素名.value ='用户名'  //把值（显示的内容文字）改成新的内容
+元素名.type = 'password'  //把表单的类型改成password类型
+
+表单属性中添加就有效果,移除就没有效果,一律使用布尔值表示 如果为true 代表添加了该属性 如果是false 代
+表移除了该属性
+比如： disabled、checked、selected
+checked改为true可以勾选
+元素名.checked=true  //复选框勾选
+
+disabled //按钮的点击状态
+元素名.disabled=true  //改为不可点击 ，true是禁用点击状态，false是开启点击状态
+
+selected 下拉菜单默认选择
+元素名.options[下标和数组一样从0开始].selected=true //默认选择

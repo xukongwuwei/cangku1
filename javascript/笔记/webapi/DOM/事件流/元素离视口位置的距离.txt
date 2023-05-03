@@ -1,0 +1,2 @@
+元素.getBoundingClientRect().left  //获得当前视口离左边的距离
+元素.getBoundingClientRect().top  //获得当前视口离上边的距离

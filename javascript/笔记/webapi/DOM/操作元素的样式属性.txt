@@ -1,0 +1,29 @@
+1.通过 style 属性操作CSS
+2. 操作类名(className) 操作CSS
+3. 通过 classList 操作类控制CSS
+
+1.通过 style 属性操作CSS
+语法：
+元素名.style.样式属性='值'
+注意：
+1. 修改样式通过style属性引出
+2. 如果属性有-连接符，需要转换为小驼峰命名法
+3. 赋值的时候，需要的时候不要忘记加css单位	
+
+2. 操作类名(className) 操作CSS
+如果修改的样式比较多，直接通过style属性修改比较繁琐，我们可以通过借助于css类名的形式
+调用CSS里面的选择器
+语法：
+元素名.className='选择器名字'
+注意：
+1. 由于class是关键字, 所以使用className去代替
+2. className是使用新值换旧值, 如果需要添加一个类,需要保留之前的类名
+
+
+3. 通过 classList 操作类控制CSS
+为了解决className 容易覆盖以前的类名，我们可以通过classList方式追加和删除类名
+语法：
+元素名.classList.add('类名')  //追加一个类或者叫追加一个选择器
+元素名.classList.remove('类名')  //删除一个类或者叫删除一个选择器
+元素名.classList.toggle('类名')  //切换一个类，就是有这个类就删除它，没有这个类就加上它
+元素名.classList.contains('类名	') 看看有没有包含某个类，如果有则返回true，么有则返回false

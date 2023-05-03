@@ -1,0 +1,26 @@
+作用: 可以将数据永久存储在本地(用户的电脑), 除非手动删除，否则关闭页面也会存在
+特性：本地存储只能存储字符串
+可以多窗口（页面）共享（同一浏览器可以共享）
+以键值对的形式存储使用
+存储数据：
+语法：
+localStorage.setItem('key', 'value')  //如果不是变量需要加' '
+
+修改数据
+和存储数据一样，有这个数据就是改，没有就是增
+语法：
+localStorage.setItem('key', 'value')  //如果不是变量需要加' '
+
+获取数据：
+语法：
+localStorage.getItem('key')  //记得加' '
+
+删除数据：
+语法：
+localStorage.removeItem('key')  //记得加 ' ' 
+
+全部删除：
+语法：
+localStorage.clear()
+浏览器查看本地数据：
+F12 ——Application——里面的Storage——里面的Local Storage

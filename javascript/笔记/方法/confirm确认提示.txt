@@ -1,0 +1,6 @@
+Window.confirm() 方法显示一个具有一个可选消息和两个按钮 (确定和取消) 的模态对话框。
+语法：
+result = window.confirm(message);
+
+message 是要在对话框中显示的可选字符串。
+result 是一个布尔值，表示是选择确定还是取消 (true 表示 OK)。

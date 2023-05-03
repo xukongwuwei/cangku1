@@ -1,0 +1,12 @@
+false是假    true是真
+
+除了0以外的数字都是真
+
+除了' '以外的字符串都是真
+
+0是假
+' '是假
+undefined是假
+null是假
+NaN是假
+false是假

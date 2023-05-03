@@ -1,0 +1,13 @@
+在 JavaScript 中最主要的数据类型有 6 种：
+基本数据类型：
+ 字符串、数值、布尔、undefined、null
+引用类型: 
+ 对象
+但是，我们会发现有些特殊情况：
+其实字符串、数值、布尔、等基本类型也都有专门的构造函数，这些我们称为包装类型。例如数组.length
+JS中几乎所有的数据都可以基于构成函数创建。
+
+引用类型
+ Object，Array，RegExp，Date 等
+包装类型
+ String，Number，Boolean 等

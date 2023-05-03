@@ -1,0 +1,1 @@
+标签选择body， 因为body是唯一的标签，可以直接写 document.body.style

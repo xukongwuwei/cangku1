@@ -1,0 +1,19 @@
+会在窗口尺寸改变的时候触发事件：
+resize
+window.addEventListener('resizi',function(){})
+
+
+获取元素的可见部分宽高（不包含边框，margin，滚动条等）
+clientWidth和clientHeight
+
+检测屏幕宽度 clientWidth
+document.documentElement.clientWidth  //html的元素名
+
+检测其他盒子宽度就换一下元素名就行
+
+
+获取宽高：
+获取元素的自身宽高、包含元素自身设置的宽高、padding、border
+offsetWidth和offsetHeight
+获取出来的是数值,方便计算
+注意: 获取的是可视宽高, 如果盒子是隐藏的,获取的结果是0

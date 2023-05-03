@@ -1,0 +1,11 @@
+类继承
+class 新类 extends 旧类{
+
+}
+
+类继承  //把参数给父类，借此调用父类构造函数
+class 新类 extends 旧类{
+constructor( ){ 
+super() //调用父类构造函数和普通函数
+}
+}

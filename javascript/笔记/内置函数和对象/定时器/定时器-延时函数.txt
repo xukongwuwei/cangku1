@@ -1,0 +1,12 @@
+JavaScript 内置的一个用来让代码延迟执行的函数，叫 setTimeout 
+语法：
+setTimeout(回调函数，等待的毫秒数)
+
+setTimeout 仅仅只执行一次，所以可以理解为就是把一段代码延迟执行, 平时省略window
+清除延时函数：
+let 变量名=setTimeout(回调函数，等待的毫秒数)
+clearTimeout（变量名）
+
+注意点
+延时器需要等待,所以后面的代码先执行
+每一次调用延时器都会产生一个新的延时器

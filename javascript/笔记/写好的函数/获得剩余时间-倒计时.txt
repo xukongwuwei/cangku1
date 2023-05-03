@@ -1,0 +1,25 @@
+  //记得修改
+
+
+
+ function getCountTime() {
+      //倒计时  目标时间戳-现在时间戳=剩余时间戳
+      //目标时间
+      const last = +new Date('2023-4-21 16:00:00')  //修改目标时间
+      //现在时间
+      const now = +new Date()
+      //获得剩余时间 单位秒所以除以1000
+      const count = (last - now) / 1000
+      //把秒转换为时 分 秒
+      let d = parseInt(count / 60 / 60 / 24); // 计算天数
+      let h = parseInt(count / 60 / 60 % 24) //计算小时
+      h = h < 10 ? '0' + h : h   //补0
+      let m = parseInt(count / 60 % 60)
+      m = m < 10 ? '0' + m : m
+      let s = parseInt(count % 60)
+      s = s < 10 ? '0' + s : s
+   
+
+      //把转换完的时间填到目标盒子中
+
+    }

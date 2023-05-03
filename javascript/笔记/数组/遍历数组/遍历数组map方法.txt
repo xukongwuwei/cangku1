@@ -1,0 +1,12 @@
+map 迭代数组  //意思是加工之后产生新的数组，并且返回一个数组
+
+语法：数组名.map(function(item,index){ } )
+
+const arr =['11'','aa','bb']
+const 新数组名=arr.map(function(ele,index){   //把拼接之后的元素给新数组
+
+console.log(ele)   // ele是数组里的元素
+console.log(index)  //index是下标（索引号）
+
+retrun '要拼接的内容'+ele+'要拼接的内容 '
+})

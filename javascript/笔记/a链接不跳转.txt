@@ -1,0 +1,2 @@
+在a标签里写
+<a href="javascrpit:;">

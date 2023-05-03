@@ -1,0 +1,18 @@
+super关键字用于访问和调用对象父类上的函数，可以调用父类的构造函数，也可以调用父类的普通函数
+涉及到参数的时候就需要把参数传给父类super（参数） 
+调用父类里的函数也是 super.函数（）
+
+super 必须在子类this之前调用
+
+语法：
+class Father {
+         say( ){
+	retrun '我是爸爸'
+	}
+}
+
+class son extends Father {
+	say(){
+	return super.say( )
+	}
+}

@@ -1,0 +1,5 @@
+trim() 
+
+字符串.trim() 
+
+if (tx.value.trim() !== "")  //如果输入的不为空

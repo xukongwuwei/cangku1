@@ -1,0 +1,3 @@
+js库lodash里面cloneDeep内部实现了深拷贝
+引入js文件
+const 新对象=_.cloneDeep(被拷贝的对象)

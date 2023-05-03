@@ -1,0 +1,39 @@
+滚动条在滚动的时候持续触发的事件
+为什么要学？
+很多网页需要检测用户把页面滚动到某个区域后做一些处理， 比如固定导航栏，比如返回顶部
+事件名：scroll
+监听整个页面滚动：
+window.addEventListener('scroll',function( ){ })
+给 window 或 document 添加 scroll 事件
+监听某个元素的内部滚动直接给某个元素加即可
+
+使用场景：
+我们想要页面滚动一段距离，比如100px，就让某些元素
+显示隐藏，那我们怎么知道，页面滚动了100像素呢？
+就可以使用scroll 来检测滚动的距离
+
+scrollLeft和scrollTop （属性）
+可以给scrollLeft和scrollTop赋值 ，让页面一打开就是某个距离
+获取被卷去的大小
+获取元素内容往左、往上滚出去看不到的距离
+这两个值是可读写的
+尽量在scroll事件里面获取被卷去的距离
+语法：
+dic.addEventListener('scroll',function( ){ 
+div.scrollTop
+})
+
+获取整个页面滚动距离：
+window.addEventListener('scroll',function( ){ 
+document.documentElement.scrollTop
+
+如果页面滚动了多少就做什么
+const n=document.documentElement.scrollTop  //把页面滚动多少给n
+if(n>=多少距离){
+那么就做什么
+}
+})
+
+scrollTo() 方法可把内容滚动到指定的坐标
+语法：
+元素.scrollTo(x, y)

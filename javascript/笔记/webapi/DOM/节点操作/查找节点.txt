@@ -1,0 +1,20 @@
+父节点查找：
+parentNode 属性
+返回最近一级的父节点 找不到返回为null
+语法：
+元素名.parentNode
+
+
+子节点查找：
+childNodes
+获得所有子节点、包括文本节点（空格、换行）、注释节点等
+children 属性 （重点）
+仅获得所有元素节点
+返回的还是一个伪数组   父元素.children  第几个就是父元素.children[n] 最后一个就是 父元素.children[父元素.children.length-1]
+
+
+兄弟关系查找：
+下一个兄弟节点
+nextElementSibling 属性 元素名.nextElementSibling 
+上一个兄弟节点
+previousElementSibling 属性  元素名.previousElementSibling 

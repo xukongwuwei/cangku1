@@ -1,0 +1,13 @@
+本地只能存储字符串,无法存储复杂数据类型
+解决：需要将复杂数据类型转换成JSON字符串,在存储到本地
+将复杂数据转换成JSON字符串 存储 本地存储中
+语法：
+JSON.stringify(复杂数据类型)
+localStorage.setItem('键',JSON.stringify(复杂数据类型变量名))
+
+解决：把取出来的字符串转换为对象
+语法：JSON.parse(JSON字符串)
+JSON.parse(localStorage.getItem('键'))
+
+存的时候是数组，拿出来才能是数组
+存的时候是对象，拿出来的只能是一个对象

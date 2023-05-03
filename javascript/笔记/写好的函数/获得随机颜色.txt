@@ -1,0 +1,32 @@
+function GetRandomColor(flag = 1) {
+            let color = '' //定义一个字符串
+            if (flag) {
+                for (let i = 1; i <= 6; i++) {//十六进制有6位数，所以循环6次
+                    let num = Math.floor(Math.random() * 16) //获取随机0-15的随机数，因为F=15  因为16是不会随到的
+                    if (num >= 10) {//超过10或等于10转换为16进制
+                        switch (num) { //选择
+                            case 10: num = 'A'
+                            case 11: num = 'B'
+                            case 12: num = 'C'
+                            case 13: num = 'D'
+                            case 14: num = 'E'
+                            case 15: num = 'F'
+                        }
+
+                    }
+                    color += num //拼接
+                }
+                return '#' + color  //返回最后的结果
+            }
+            //传递的参数是false，则输出一个随机rgb的颜色
+            else {
+                for (let i = 1; i <= 3; i++) {  //rgb有三个数，所以循环3次
+
+                    color += Math.floor(Math.random() * 256) //随机0~255，因为256是不会随到的
+                    if (i !== 3) { //每次拼接之后加个,号  第三次的时候不用加
+                        color += ','
+                    }
+                }
+                return 'rgb(' + color + ')' //返回最后的结果
+            }
+        }

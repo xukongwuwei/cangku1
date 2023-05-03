@@ -1,0 +1,29 @@
+Math对象是JavaScript提供的一个“数学”对象
+作用：提供了一系列做数学运算的方法
+Math对象包含的方法有：
+random：生成0-1之间的随机数（包含0不包括1）
+ceil：向上取整
+floor：向下取整
+max：找最大数
+min：找最小数
+pow：幂运算
+abs：绝对值
+
+其余的可以去文档找
+
+用法：
+Math.对象名(参数)//只能放参数，数组没用
+
+
+Math.random() 随机数函数， 返回一个0 - 1之间，并且包括0不包括1的随机小数 [0, 1）
+
+如何生成0-10的随机数呢？
+Math.floor(Math.random() * (10 + 1))
+
+如何生成5-10的随机数？
+Math.floor(Math.random() * (5 + 1)) + 5
+
+如何生成N-M之间的随机数
+ function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }

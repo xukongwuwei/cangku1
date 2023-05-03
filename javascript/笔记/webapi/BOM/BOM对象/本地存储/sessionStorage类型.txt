@@ -1,0 +1,26 @@
+特性：
+生命周期为关闭浏览器窗口
+在同一个窗口(页面)下数据可以共享
+以键值对的形式存储使用
+用法跟localStorage 基本相同
+
+存储数据：
+语法：
+sessionStorage.setItem('key', 'value')  //如果不是变量需要加' '
+
+修改数据
+和存储数据一样，有这个数据就是改，没有就是增
+语法：
+sessionStorage.setItem('key', 'value')  //如果不是变量需要加' '
+
+获取数据：
+语法：
+sessionStorage.getItem('key')  //记得加' '
+
+删除数据：
+语法：
+sessionStorage.removeItem('key')  //记得加 ' ' 
+
+全部删除：
+语法：
+sessionStorage.clear()

@@ -1,0 +1,11 @@
+插件: 就是别人写好的一些代码,我们只需要复制对应的代码,就可以直接实现对应的效果
+学习插件的基本过程
+熟悉官网,了解这个插件可以完成什么需求 https://www.swiper.com.cn/
+看在线演示,找到符合自己需求的demo https://www.swiper.com.cn/demo/index.html
+查看基本使用流程 https://www.swiper.com.cn/usage/index.html
+查看APi文档,去配置自己的插件 https://www.swiper.com.cn/api/index.html
+注意: 多个swiper同时使用的时候, 类名需要注意区分
+
+下载之后
+css文件和js文件在package文件夹里面叫swiper-bundle.min.css和swiper-bundle.min.js  
+如果没有package文件夹 就直接找css文件和js文件

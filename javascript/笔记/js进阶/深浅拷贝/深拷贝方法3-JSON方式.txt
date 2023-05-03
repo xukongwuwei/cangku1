@@ -1,0 +1,2 @@
+ 通过JSON.stringify()实现
+const 新对象=JSON.parse(JSON.stringify(被拷贝的对象))

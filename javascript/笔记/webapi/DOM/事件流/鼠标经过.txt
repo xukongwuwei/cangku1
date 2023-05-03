@@ -1,0 +1,3 @@
+鼠标经过事件：
+mouseover 和 mouseout 会有冒泡效果
+mouseenter 和 mouseleave 没有冒泡效果 (推荐)

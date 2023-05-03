@@ -1,0 +1,32 @@
+肯定首先选中这个标签，跟 CSS选择器类似，选中标签才能操作
+查找元素DOM元素就是利用 JS 选择页面中标签元素
+
+选择匹配的第一个元素
+语法：
+document.querySelector('css选择器')  记得加' ' //选择器和CSS一样的用法
+参数:
+包含一个或多个有效的CSS选择器 字符串
+返回值：
+CSS选择器匹配的第一个元素,一个 HTMLElement对象。
+如果没有匹配到，则返回null。
+
+
+
+选择匹配的多个元素
+语法：
+document.querySelectorAll('css选择器')  记得加' '  //选择器和CSS一样的用法
+参数:
+包含一个或多个有效的CSS选择器 字符串
+返回值：
+CSS选择器匹配的NodeList 对象集合
+但是得到的是一个伪数组：
+有长度有索引号的数组
+但是没有 pop() push() 等数组方法
+想要得到里面的每一个对象，则需要遍历（for）的方式获得。
+注意事项：哪怕只有一个元素，通过querySelectAll() 获取过来的也是一个伪数组，里面只有一个元素而已
+
+获得html元素
+document.documentElement
+
+获取body元素
+document.body

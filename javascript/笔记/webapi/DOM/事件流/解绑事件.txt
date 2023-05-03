@@ -1,0 +1,16 @@
+on事件方式，直接使用null覆盖偶就可以实现事件的解绑 //L0 事件移除解绑
+btn.onclick = function () {
+       alert('点击了')
+    
+       btn.onclick = null
+    }
+
+addEventListener方式，必须使用：
+removeEventListener(事件类型, 事件处理函数, [获取捕获或者冒泡阶段])
+//注意：匿名函数无法被解绑
+function fn() {
+      alert('点击了')
+      btn.removeEventListener('click', fn)     // L2 事件移除解绑
+    }
+    btn.addEventListener('click', fn)
+
