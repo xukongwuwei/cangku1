@@ -1,0 +1,5 @@
+浏览器中提供的 XMLHttpRequest 用法比较复杂，所以 jQuery 对 XMLHttpRequest 进行了封装，提供了一系列 Ajax 相关的函数，极大地降低了 Ajax 的使用难度。
+jQuery 中发起 Ajax 请求最常用的三个方法如下：
+ $.get()
+ $.post()
+ $.ajax()

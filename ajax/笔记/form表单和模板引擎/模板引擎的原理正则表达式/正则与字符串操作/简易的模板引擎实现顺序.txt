@@ -1,0 +1,48 @@
+实现步骤
+
+定义模板结构
+预调用模板引擎
+封装 template 函数
+导入并使用自定义的模板引擎
+
+1. 定义模板结构
+<!-- 定义模板结构 -->
+<script type="text/html" id="tpl-user">
+   <div>姓名：{{name}}</div>
+   <div>年龄：{{ age }}</div>
+   <div>性别：{{  gender}}</div>
+   <div>住址：{{address  }}</div>
+</script>
+
+2. 预调用模板引擎
+<script>
+   // 定义数据
+   var data = { name: 'zs', age: 28, gender: '男', address: '北京顺义马坡' }
+ // 调用模板函数
+   var htmlStr = template('tpl-user', data)
+ // 渲染HTML结构
+   document.getElementById('user-box').innerHTML = htmlStr
+</script>
+
+
+3.封装template函数
+function template(id, data) {
+  var str = document.getElementById(id).innerHTML
+  var pattern = /{{\s*([a-zA-Z]+)\s*}}/
+  var pattResult = null
+  while ((pattResult = pattern.exec(str))) {
+    str = str.replace(pattResult[0], data[pattResult[1]])
+  }
+  return str
+}
+
+4.导入并使用自定义的模板引擎
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>自定义模板引擎</title>
+    <!-- 导入自定义的模板引擎 -->
+    <script src="./js/template.js"></script>
+</head>
+

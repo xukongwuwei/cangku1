@@ -1,0 +1,10 @@
+定义一个 success 回调函数：
+<script>
+   function success(data) {
+     console.log('获取到了data数据：')
+     console.log(data)
+   }
+ </script>
+
+通过 <script> 标签，请求接口数据：
+<script src="http://ajax.frontend.itheima.net:3006/api/jsonp?callback=success&name=zs&age=20"></script>

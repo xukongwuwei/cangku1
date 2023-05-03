@@ -1,0 +1,30 @@
+jQuery 提供的 $.ajax() 函数，除了可以发起真正的 Ajax 数据请求之外，还能够发起 JSONP 数据请求，例如：
+
+$.ajax({
+    url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
+    // 如果要使用 $.ajax() 发起 JSONP 请求，必须指定 datatype 为 jsonp
+    dataType: 'jsonp',
+    success: function(res) {
+       console.log(res)
+    }
+ })
+默认情况下，使用 jQuery 发起 JSONP 请求，会自动携带一个 callback=jQueryxxx 的参数，jQueryxxx 是随机生成的一个回调函数名称。
+
+在使用 jQuery 发起 JSONP 请求时，如果想要自定义 JSONP 的参数以及回调函数名称，可以通过如下两个参数来指定：
+$.ajax({
+    url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
+    dataType: 'jsonp',
+    // 发送到服务端的参数名称，默认值为 callback
+    jsonp: 'callback',
+    // 自定义的回调函数名称，默认值为 jQueryxxx 格式
+    jsonpCallback: 'abc',
+    success: function(res) {
+       console.log(res)
+    }
+ })
+
+jQuery中JSONP的实现过程
+
+jQuery 中的 JSONP，也是通过 <script> 标签的 src 属性实现跨域数据访问的，只不过，jQuery 采用的是动态创建和移除 <script> 标签的方式，来发起 JSONP 数据请求。
+在发起 JSONP 请求的时候，动态向 <header> 中 append 一个 <script> 标签；
+在 JSONP 请求成功以后，动态从 <header> 中移除刚才 append 进去的 <script> 标签；

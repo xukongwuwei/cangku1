@@ -1,0 +1,14 @@
+URL（全称是UniformResourceLocator）中文叫统一资源定位符，用于标识互联网上每个资源的唯一存放位置。浏览器只有通过URL地址，才能正确定位资源的存放位置，从而成功访问到对应的资源。
+常见的URL举例：
+http://www.baidu.com
+http://www.taobao.com
+http://www.cnblogs.com/liulongbinblogs/p/11649393.html
+
+ URL地址的组成部分
+URL地址一般由三部组成：
+① 客户端与服务器之间的通信协议
+② 存有该资源的服务器名称
+③ 资源在服务器上具体的存放位置
+
+http://          www.cnblogs.com/		liulongbinblogs/p/11649393.html
+通信协议	   资源在服务器上具体的存放位置      	服务器名称

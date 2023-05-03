@@ -1,0 +1,15 @@
+1. serialize()函数
+$(selector).serialize()
+serialize() 函数的好处：可以一次性获取到表单中的所有的数据。
+
+
+2. serialize()函数示例
+<form id="form1">
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <button type="submit">提交</button>
+</form>
+
+$('#form1').serialize()
+// 调用的结果：
+// username=用户名的值&password=密码的值

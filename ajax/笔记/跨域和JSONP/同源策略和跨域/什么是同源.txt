@@ -1,0 +1,15 @@
+如果两个页面的协议，域名和端口都相同，则两个页面具有相同的源。
+例如，下表给出了相对于 http://www.test.com/index.html 页面的同源检测：
+URL	是否同源	原因
+http://www.test.com/other.html	是	同源（协议、域名、端口相同）
+https://www.test.com/about.html	否	协议不同（http 与 https）
+http://blog.test.com/movie.html	否	域名不同（www.test.com 与 blog.test.com）
+http://www.test.com:7001/home.html	否	端口不同（默认的 80 端口与 7001 端口）
+http://www.test.com:80/main.html	是	同源（协议、域名、端口相同）
+
+同源策略（英文全称 Same origin policy）是浏览器提供的一个安全功能。
+MDN 官方给定的概念：同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。
+通俗的理解：浏览器规定，A 网站的 JavaScript，不允许和非同源的网站 C 之间，进行资源的交互，例如：
+无法读取非同源网页的 Cookie、LocalStorage 和 IndexedDB
+无法接触非同源网页的 DOM
+无法向非同源地址发送 Ajax 请求

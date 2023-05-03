@@ -1,0 +1,21 @@
+JSON和JS对象的关系
+JSON 是 JS 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。例如：
+//这是一个对象
+var obj = {a: 'Hello', b: 'World'}
+
+//这是一个 JSON 字符串，本质是一个字符串
+var json = '{"a": "Hello", "b": "World"}' 
+
+
+要实现从 JSON 字符串转换为 JS 对象，使用 JSON.parse() 方法：
+var obj = JSON.parse('{"a": "Hello", "b": "World"}')
+//结果是 {a: 'Hello', b: 'World'}
+
+
+要实现从 JS 对象转换为 JSON 字符串，使用 JSON.stringify() 方法：
+var json = JSON.stringify({a: 'Hello', b: 'World'})
+//结果是 '{"a": "Hello", "b": "World"}'
+
+序列化和反序列化
+把数据对象转换为字符串的过程，叫做序列化，例如：调用 JSON.stringify() 函数的操作，叫做 JSON 序列化。
+把字符串转换为数据对象的过程，叫做反序列化，例如：调用 JSON.parse() 函数的操作，叫做 JSON 反序列化。

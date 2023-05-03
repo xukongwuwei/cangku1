@@ -1,0 +1,7 @@
+axios 也提供了类似于 jQuery 中 $.ajax() 的函数，语法如下：
+ axios({
+     method: '请求类型',
+     url: '请求的URL地址',
+     data: { /* POST数据 */ },
+     params: { /* GET参数 */ }
+ }) .then(callback)

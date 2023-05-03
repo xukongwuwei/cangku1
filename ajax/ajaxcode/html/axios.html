@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/axios.js"></script>
+</head>
+
+<body>
+    <script>
+        // //用axios发起get请求
+        // axios.get('http://www.liulongbin.top:3006/api/get', { params: { name: 'zs', age: 20 } }).then(function (res) {
+        //     console.log(res.data);
+        // })
+        // //用axios发起post请求
+        // axios.post('http://www.liulongbin.top:3006/api/post', { location: '北京123', address: 'asd顺义' }).then(function (res) {
+        //     console.log(res.data);
+        // })
+
+        //直接用axios发起get请求
+        // axios({
+        //     method: 'GET',
+        //     url: 'http://www.liulongbin.top:3006/api/get',
+        //     params: { // GET 参数要通过 params 属性提供
+        //         name: 'zas',
+        //         age: 20
+        //     }
+        // }).then(function (res) {
+        //     console.log(res.data);
+        // })
+
+        //直接用axios发起post请求
+        axios({
+            method: 'POST',
+            url: 'http://www.liulongbin.top:3006/api/post',
+            data: { // POST 数据要通过 data 属性提供
+                bookname: '程序员ad 的自我修养',
+                price: 6676
+            }
+        }).then(function (res) {
+            console.log(res.data);
+        })
+    </script>
+</body>
+
+</html>

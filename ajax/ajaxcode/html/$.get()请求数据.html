@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        $(function () {
+            // $.get('http://www.liulongbin.top:3006/api/getbooks', function (data) {
+            //     console.log(data);
+            // })
+            // $.get('http://www.liulongbin.top:3006/api/getbooks', { publisher: "北京图书出版社" }, function (data) {
+            //     console.log(data);
+            // })
+            $.post(
+                'http://www.liulongbin.top:3006/api/addbook', // 请求的URL地址
+                { bookname: 'a水浒传', author: 'a施耐庵', publisher: 'a上海图书出版社' }, // 提交的数据
+                function (res) { // 回调函数
+                    console.log(res)
+                }
+            )
+
+        })
+    </script>
+</body>
+
+</html>

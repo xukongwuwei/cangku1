@@ -1,0 +1,17 @@
+ 渲染UI结构时遇到的问题
+var rows = []
+$.each(res.data, function (i, item) { // 循环拼接字符串
+    rows.push('<li class="list-group-item">'+ item.content +'<span class="badge cmt-date">评论时间：'+ item.time +'</span><span class="badge cmt-person">评论人：'+ item.username +'</span></li>')
+})
+$('#cmt-list').empty().append(rows.join('')) // 渲染列表的UI结构
+上述代码是通过字符串拼接的形式，来渲染UI结构。
+如果UI结构比较复杂，则拼接字符串的时候需要格外注意引号之前的嵌套。且一旦需求发生变化，修改起来也非常麻烦。
+
+
+ 什么是模板引擎
+模板引擎，顾名思义，它可以根据程序员指定的模板结构和数据，自动生成一个完整的HTML页面。
+
+模板引擎的好处
+减少了字符串的拼接操作
+使代码结构更清晰
+使代码更易于阅读与维护

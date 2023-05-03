@@ -1,0 +1,12 @@
+使用 Ajax 请求数据时，被请求的 URL 地址，就叫做数据接口（简称接口）。同时，每个接口必须有请求方式。
+例如：
+http://www.liulongbin.top:3006/api/getbooks  获取图书列表的接口(GET请求)
+http://www.liulongbin.top:3006/api/addbook   添加图书的接口（POST请求）
+
+接口的请求过程
+
+通过GET方式请求接口的过程：
+希望从服务器获取数据--》ajax发起GET数据请求--》处理请求--》ajax响应GET请求--》获取数据
+
+通过POST方式请求接口的过程：
+希望向服务器提交数据--》ajax发起POST数据请求--》处理请求--》ajax响应POST请求--》提交数据

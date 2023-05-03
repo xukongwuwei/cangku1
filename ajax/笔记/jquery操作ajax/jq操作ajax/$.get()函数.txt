@@ -1,0 +1,22 @@
+ $.get()函数的语法
+jQuery 中 $.get() 函数的功能单一，专门用来发起 get 请求，从而将服务器上的资源请求到客户端来进行使用。
+$.get() 函数的语法如下：
+$.get(url, [data], [callback])
+其中，三个参数各自代表的含义如下：
+参数名	参数类型	是否必选	说明
+url	string	是	要请求的资源地址
+data	object	否	请求资源期间要携带的参数
+callback	function	否	请求成功时的回调函数
+
+$.get()发起不带参数的请求
+使用 $.get() 函数发起不带参数的请求时，直接提供请求的 URL 地址和请求成功之后的回调函数即可，示例代码如下：
+$.get('http://www.liulongbin.top:3006/api/getbooks', function(res) {
+    console.log(res) // 这里的 res 是服务器返回的数据
+})
+
+
+$.get()发起带参数的请求
+使用 $.get() 函数发起带参数的请求时，示例代码如下：
+$.get('http://www.liulongbin.top:3006/api/getbooks', { id: 1 }, function(res) {
+    console.log(res)
+})

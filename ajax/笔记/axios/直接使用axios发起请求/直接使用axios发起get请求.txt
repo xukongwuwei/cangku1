@@ -1,0 +1,11 @@
+ axios({
+     method: 'GET',
+     url: 'http://www.liulongbin.top:3006/api/get',
+     params: { // GET 参数要通过 params 属性提供
+         name: 'zs',
+         age: 20
+     }
+ }).then(function(res) {
+     console.log(res.data)
+ })
+

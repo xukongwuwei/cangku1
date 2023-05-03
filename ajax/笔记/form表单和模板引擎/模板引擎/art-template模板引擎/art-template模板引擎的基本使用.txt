@@ -1,0 +1,24 @@
+ art-template的使用步骤
+
+1.导入 art-template
+2.定义数据
+3.定义模板
+4.调用 template 函数
+5.渲染HTML结构
+
+1.导入 art-template
+script scr  的形式导入
+
+2.定义数据
+let 数据名，
+
+3.定义模板
+在script中有个属性type改成type="text/html",然后给模板取个id
+<script type="text/html" id="取个id"
+<标签>{{}}</标签>   //{{}} 是占位符，用来填数据的名字,直接写数据里的属性名，不用写对象名
+
+4.调用 template 函数
+let 返回值=templat('模板的id不用加#',数据名)
+
+5.渲染HTML结构
+dom元素.html(返回值变量名)

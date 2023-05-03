@@ -1,0 +1,12 @@
+新版本的 XMLHttpRequest 对象中，可以通过监听 xhr.upload.onprogress 事件，来获取到文件的上传进度。语法格式如下：
+ // 创建 XHR 对象
+ var xhr = new XMLHttpRequest()
+ // 监听 xhr.upload 的 onprogress 事件
+ xhr.upload.onprogress = function(e) {
+    // e.lengthComputable 是一个布尔值，表示当前上传的资源是否具有可计算的长度
+    if (e.lengthComputable) {
+        // e.loaded 已传输的字节
+        // e.total  需传输的总字节
+        var percentComplete = Math.ceil((e.loaded / e.total) * 100)
+    }
+ }

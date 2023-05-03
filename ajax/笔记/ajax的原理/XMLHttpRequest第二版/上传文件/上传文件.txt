@@ -1,0 +1,57 @@
+新版 XMLHttpRequest 对象，不仅可以发送文本信息，还可以上传文件。
+实现步骤：
+定义 UI 结构
+验证是否选择了文件
+向 FormData 中追加文件
+使用 xhr 发起上传文件的请求
+监听 onreadystatechange 事件
+
+
+1.定义UI结构
+ <!-- 1. 文件选择框 -->
+    <input type="file" id="file1" />
+    <!-- 2. 上传按钮 -->
+    <button id="btnUpload">上传文件</button>
+    <br />
+    <!-- 3. 显示上传到服务器上的图片 -->
+    <img src="" alt="" id="img" width="800" />
+
+2. 验证是否选择了文件
+ // 1. 获取上传文件的按钮
+ var btnUpload = document.querySelector('#btnUpload')
+ // 2. 为按钮添加 click 事件监听
+ btnUpload.addEventListener('click', function() {
+     // 3. 获取到选择的文件列表
+     var files = document.querySelector('#file1').files
+     if (files.length <= 0) {
+         return alert('请选择要上传的文件！')
+     }
+     // ...后续业务逻辑
+ })
+
+3. 向FormData中追加文件
+// 1. 创建 FormData 对象
+ var fd = new FormData()
+ // 2. 向 FormData 中追加文件
+ fd.append('avatar', files[0])
+
+4. 使用 xhr 发起上传文件的请求
+// 1. 创建 xhr 对象
+ var xhr = new XMLHttpRequest()
+ // 2. 调用 open 函数，指定请求类型与URL地址。其中，请求类型必须为 POST
+ xhr.open('POST', 'http://www.liulongbin.top:3006/api/upload/avatar')
+ // 3. 发起请求
+ xhr.send(fd)
+
+5. 监听onreadystatechange事件
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText)
+    if (data.status === 200) { // 上传文件成功
+      // 将服务器返回的图片地址，设置为 <img> 标签的 src 属性
+      document.querySelector('#img').src = 'http://www.liulongbin.top:3006' + data.url
+    } else { // 上传文件失败
+      console.log(data.message)
+    }
+  }
+}

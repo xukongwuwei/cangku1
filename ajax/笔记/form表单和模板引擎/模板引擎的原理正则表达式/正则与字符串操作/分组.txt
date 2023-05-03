@@ -1,0 +1,9 @@
+正则表达式中 ( ) 包起来的内容表示一个分组，可以通过分组来提取自己想要的内容
+示例代码如下
+var str = '<div>我是{{name}}</div>'
+ var pattern = /{{([a-zA-Z]+)}}/
+
+ var patternResult = pattern.exec(str)
+ console.log(patternResult)
+ // 得到 name 相关的分组信息
+ // ["{{name}}", "name", index: 7, input: "<div>我是{{name}}</div>", groups: undefined]

@@ -1,0 +1,36 @@
+$.ajax()函数的语法
+相比于 $.get() 和 $.post() 函数，jQuery 中提供的 $.ajax() 函数，是一个功能比较综合的函数，它允许我们对 Ajax 请求进行更详细的配置。
+$.ajax() 函数的基本语法如下：
+$.ajax({
+   type: '', // 请求的方式，例如 GET 或 POST
+   url: '',  // 请求的 URL 地址
+   data: { },// 这次请求要携带的数据
+   success: function(res) { } // 请求成功之后的回调函数
+})
+
+使用$.ajax()发起GET请求
+使用 $.ajax() 发起 GET 请求时，只需要将 type 属性的值设置为 'GET' 即可：
+$.ajax({
+   type: 'GET', // 请求的方式
+   url: 'http://www.liulongbin.top:3006/api/getbooks',  // 请求的 URL 地址
+   data: { id: 1 },// 这次请求要携带的数据
+   success: function(res) { // 请求成功之后的回调函数
+       console.log(res)
+   }
+})
+
+使用$.ajax()发起POST请求
+使用 $.ajax() 发起 POST 请求时，只需要将 type 属性的值设置为 'POST' 即可：
+$.ajax({
+   type: 'POST', // 请求的方式
+   url: 'http://www.liulongbin.top:3006/api/addbook',  // 请求的 URL 地址
+   data: { // 要提交给服务器的数据
+      bookname: '水浒传',
+      author: '施耐庵',
+      publisher: '上海图书出版社'
+    },
+   success: function(res) { // 请求成功之后的回调函数
+       console.log(res)
+   }
+})
+

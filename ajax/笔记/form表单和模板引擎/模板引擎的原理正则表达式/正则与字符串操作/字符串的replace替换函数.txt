@@ -1,0 +1,11 @@
+字符串的replace函数
+replace() 函数用于在字符串中用一些字符替换另一些字符，语法格式如下：
+var result = '123456'.replace('123', 'abc') // 得到的 result 的值为字符串 'abc456'
+示例代码如下：
+var str = '<div>我是{{name}}</div>'
+var pattern = /{{([a-zA-Z]+)}}/
+
+var patternResult = pattern.exec(str)
+str = str.replace(patternResult[0], patternResult[1]) // replace 函数返回值为替换后的新字符串
+// 输出的内容是：<div>我是name</div>
+console.log(str)

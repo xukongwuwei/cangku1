@@ -1,0 +1,10 @@
+当监听到表单的提交事件以后，可以调用事件对象的 event.preventDefault() 函数，来阻止表单的提交和页面的跳转，示例代码如下：
+$('#form1').submit(function(e) {
+   // 阻止表单的提交和页面的跳转
+   e.preventDefault()
+})
+
+$('#form1').on('submit', function(e) {
+   // 阻止表单的提交和页面的跳转
+   e.preventDefault()
+})

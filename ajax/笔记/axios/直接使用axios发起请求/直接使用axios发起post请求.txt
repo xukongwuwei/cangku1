@@ -1,0 +1,10 @@
+axios({
+     method: 'POST',
+     url: 'http://www.liulongbin.top:3006/api/post',
+     data: { // POST 数据要通过 data 属性提供
+         bookname: '程序员的自我修养',
+         price: 666
+     }
+ }).then(function(res) {
+     console.log(res.data)
+ })

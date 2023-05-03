@@ -1,0 +1,5 @@
+使用 xhr 对象发起带参数的 GET 请求时，只需在调用 xhr.open 期间，为 URL 地址指定参数即可：
+// ...省略不必要的代码
+xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1')
+// ...省略不必要的代码
+这种在 URL 地址后面拼接的参数，叫做查询字符串。

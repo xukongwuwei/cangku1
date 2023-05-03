@@ -1,0 +1,18 @@
+$.post()函数的语法
+jQuery 中 $.post() 函数的功能单一，专门用来发起 post 请求，从而向服务器提交数据。
+$.post() 函数的语法如下：
+$.post(url, [data], [callback])
+其中，三个参数各自代表的含义如下：
+参数名	参数类型	是否必选	说明
+url	string	是	提交数据的地址
+data	object	否	要提交的数据
+callback	function	否	数据提交成功时的回调函数
+$.post()向服务器提交数据
+$.post()向服务器提交数据
+$.post(
+   'http://www.liulongbin.top:3006/api/addbook', // 请求的URL地址
+   { bookname: '水浒传', author: '施耐庵', publisher: '上海图书出版社' }, // 提交的数据
+   function(res) { // 回调函数
+      console.log(res)
+   }
+)

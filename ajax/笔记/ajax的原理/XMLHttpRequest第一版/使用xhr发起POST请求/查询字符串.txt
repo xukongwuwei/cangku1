@@ -1,0 +1,19 @@
+ 什么是查询字符串
+定义：查询字符串（URL 参数）是指在 URL 的末尾加上用于向服务器发送信息的字符串（变量）。
+格式：将英文的 ? 放在URL 的末尾，然后再加上 参数＝值 ，想加上多个参数的话，使用 & 符号进行分隔。以这个形式，可以将想要发送给服务器的数据添加到 URL 中。
+// 不带参数的 URL 地址
+http://www.liulongbin.top:3006/api/getbooks
+// 带一个参数的 URL 地址
+http://www.liulongbin.top:3006/api/getbooks?id=1
+// 带两个参数的 URL 地址
+http://www.liulongbin.top:3006/api/getbooks?id=1&bookname=西游记
+
+GET请求携带参数的本质
+无论使用 $.ajax()，还是使用 $.get()，又或者直接使用 xhr 对象发起 GET 请求，当需要携带参数的时候，本质上，都是直接将参数以查询字符串的形式，追加到 URL 地址的后面，发送到服务器的。
+$.get('url', {name: 'zs', age: 20}, function() {})
+// 等价于
+$.get('url?name=zs&age=20', function() {})
+
+$.ajax({ method: 'GET', url: 'url', data: {name: 'zs', age: 20}, success: function() {} })
+// 等价于
+$.ajax({ method: 'GET', url: 'url?name=zs&age=20', success: function() {} })

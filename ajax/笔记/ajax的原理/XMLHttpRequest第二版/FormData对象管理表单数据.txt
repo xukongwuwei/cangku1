@@ -1,0 +1,26 @@
+Ajax 操作往往用来提交表单数据。为了方便表单处理，HTML5 新增了一个 FormData 对象，可以模拟表单操作：
+// 1. 新建 FormData 对象
+      var fd = new FormData()
+      // 2. 为 FormData 添加表单项
+      fd.append('uname', 'zs')
+      fd.append('upwd', '123456')
+      // 3. 创建 XHR 对象
+      var xhr = new XMLHttpRequest()
+      // 4. 指定请求类型与URL地址
+      xhr.open('POST', 'http://www.liulongbin.top:3006/api/formdata')
+      // 5. 直接提交 FormData 对象，这与提交网页表单的效果，完全一样
+      xhr.send(fd)
+
+FormData对象也可以用来获取网页表单的值，示例代码如下：
+ // 获取表单元素
+ var form = document.querySelector('#form1')
+ // 监听表单元素的 submit 事件
+ form.addEventListener('submit', function(e) {
+    e.preventDefault()
+     // 根据 form 表单创建 FormData 对象，会自动将表单数据填充到 FormData 对象中
+     var fd = new FormData(form)
+     var xhr = new XMLHttpRequest()
+     xhr.open('POST', 'http://www.liulongbin.top:3006/api/formdata')
+     xhr.send(fd)
+     xhr.onreadystatechange = function() {}
+})

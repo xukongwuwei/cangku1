@@ -1,0 +1,33 @@
+ 1.导入需要的库
+<link rel="stylesheet" href="./lib/bootstrap.css" />
+    <script src="./lib/jquery.js"></script>
+
+2.基于Bootstrap渲染进度条
+<!-- 进度条 -->
+    <div class="progress" style="width: 500px; margin: 10px 0;">
+      <div class="progress-bar progress-bar-info progress-bar-striped active" id="percent" style="width: 0%">
+        0%
+      </div>
+    </div>
+
+3. 监听上传进度的事件
+ xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+    // 1. 计算出当前上传进度的百分比
+    var percentComplete = Math.ceil((e.loaded / e.total) * 100)
+    $('#percent')
+        // 2. 设置进度条的宽度
+        .attr('style', 'width:' + percentComplete + '%')
+        // 3. 显示当前的上传进度百分比
+        .html(percentComplete + '%')
+    }
+ }
+
+4. 监听上传完成的事件
+xhr.upload.onload = function() {
+     $('#percent')
+         // 移除上传中的类样式
+         .removeClass()
+         // 添加上传完成的类样式
+         .addClass('progress-bar progress-bar-success')
+ }

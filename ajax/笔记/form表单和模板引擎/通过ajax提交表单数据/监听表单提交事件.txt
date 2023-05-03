@@ -1,0 +1,8 @@
+在 jQuery 中，可以使用如下两种方式，监听到表单的提交事件：
+$('#form1').submit(function(e) {
+   alert('监听到了表单的提交事件')
+})
+
+$('#form1').on('submit', function(e) {
+   alert('监听到了表单的提交事件')
+})

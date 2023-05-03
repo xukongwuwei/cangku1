@@ -1,0 +1,24 @@
+什么是URL编码
+URL 地址中，只允许出现英文相关的字母、标点符号、数字，因此，在 URL 地址中不允许出现中文字符。
+如果 URL 中需要包含中文这样的字符，则必须对中文字符进行编码（转义）。
+URL编码的原则：使用安全的字符（没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符。
+URL编码原则的通俗理解：使用英文字符去表示非英文字符。
+http://www.liulongbin.top:3006/api/getbooks?id=1&bookname=西游记
+// 经过 URL 编码之后，URL地址变成了如下格式：
+http://www.liulongbin.top:3006/api/getbooks?id=1&bookname=%E8%A5%BF%E6%B8%B8%E8%AE%B0
+
+
+浏览器提供了 URL 编码与解码的 API，分别是：
+encodeURI()  编码的函数
+decodeURI()  解码的函数
+
+encodeURI('黑马程序员')
+// 输出字符串  %E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98
+decodeURI('%E9%BB%91%E9%A9%AC')
+// 输出字符串  黑马
+
+URL编码的注意事项
+由于浏览器会自动对 URL 地址进行编码操作，因此，大多数情况下，程序员不需要关心 URL 地址的编码与解码操作。
+
+更多关于 URL 编码的知识，请参考如下博客：
+https://blog.csdn.net/Lxd_0111/article/details/78028889

@@ -1,0 +1,53 @@
+1. 定义UI结构
+  <!-- 导入 jQuery -->
+    <script src="./lib/jquery.js"></script>
+
+    <!-- 文件选择框 -->
+    <input type="file" id="file1" />
+    <!-- 上传文件按钮 -->
+    <button id="btnUpload">上传</button>
+
+2. 验证是否选择了文件
+$('#btnUpload').on('click', function() {
+     // 1. 将 jQuery 对象转化为 DOM 对象，并获取选中的文件列表
+     var files = $('#file1')[0].files
+     // 2. 判断是否选择了文件
+     if (files.length <= 0) {
+         return alert('请选择图片后再上传！‘)
+     }
+ })
+
+3. 向FormData中追加文件
+// 向 FormData 中追加文件
+ var fd = new FormData()
+ fd.append('avatar', files[0])
+
+4. 使用jQuery发起上传文件的请求
+$.ajax({
+     method: 'POST',
+     url: 'http://www.liulongbin.top:3006/api/upload/avatar',
+     data: fd,
+     // 不修改 Content-Type 属性，使用 FormData 默认的 Content-Type 值
+     contentType: false,
+     // 不对 FormData 中的数据进行 url 编码，而是将 FormData 数据原样发送到服务器
+     processData: false,
+     success: function(res) {
+         console.log(res)
+     }
+ })
+
+ jQuery实现loading效果
+1.ajaxStart(callback)
+Ajax 请求开始时，执行 ajaxStart 函数。可以在 ajaxStart 的 callback 中显示 loading 效果，示例代码如下：// 自 jQuery 版本 1.8 起，该方法只能被附加到文档
+ $(document).ajaxStart(function() {
+     $('#loading').show()
+ })
+
+注意： $(document).ajaxStart() 函数会监听当前文档内所有的 Ajax 请求。
+2. ajaxStop(callback)
+Ajax 请求结束时，执行 ajaxStop 函数。可以在 ajaxStop 的 callback 中隐藏 loading 效果，示例代码如下：
+// 自 jQuery 版本 1.8 起，该方法只能被附加到文档
+ $(document).ajaxStop(function() {
+     $('#loading').hide()
+ })
+

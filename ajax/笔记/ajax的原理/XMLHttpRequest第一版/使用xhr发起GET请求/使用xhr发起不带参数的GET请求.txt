@@ -1,0 +1,28 @@
+使用xhr发起GET请求
+步骤：
+1.创建 xhr 对象
+2.调用 xhr.open() 函数
+3.调用 xhr.send() 函数
+4.监听 xhr.onreadystatechange 事件
+// 1. 创建 XHR 对象
+var xhr = new XMLHttpRequest()
+// 2. 调用 open 函数，指定 请求方式 与 URL地址
+xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks')
+// 3. 调用 send 函数，发起 Ajax 请求
+xhr.send()
+// 4. 监听 onreadystatechange 事件
+xhr.onreadystatechange = function() {
+    // 4.1 监听 xhr 对象的请求状态 readyState ；与服务器响应的状态 status
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        // 4.2 打印服务器响应回来的数据
+        console.log(xhr.responseText)
+    }
+}
+
+XMLHttpRequest 对象的 readyState 属性，用来表示当前 Ajax 请求所处的状态。每个 Ajax 请求必然处于以下状态中的一个：
+值	状态			描述
+0	UNSENT			XMLHttpRequest 对象已被创建，但尚未调用 open方法。
+1	OPENED			open() 方法已经被调用。
+2	HEADERS_RECEIVED		send() 方法已经被调用，响应头也已经被接收。
+3	LOADING			数据接收中，此时 response 属性中已经包含部分数据。
+4	DONE			Ajax 请求完成，这意味着数据传输已经彻底完成或失败。

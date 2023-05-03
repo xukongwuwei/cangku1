@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" name="" id="sc">
+    <button id="btn1">上传文件</button>
+    <span id="load"></span>
+
+    <script>
+        document.querySelector('#btn1').addEventListener('click', function () {
+            //点击上传之后，获取文件，把文件追加给fromdata
+            let file = document.querySelector('#sc').files
+            //判断有没有文件
+            if (file.length <= 0) return alert('请选择文件')
+            //创建formdata对象
+            let fd = new FormData()
+            //把文件追加给fd
+            fd.append('avatar', file[0])
+
+            //发送请求，上传文件都是用post
+            let xhr = new XMLHttpRequest()
+            xhr.upload.onprogress = function (e) {
+                // e.lengthComputable 是一个布尔值，表示当前上传的资源是否具有可计算的长度
+                if (e.lengthComputable) {
+                    // e.loaded 已传输的字节
+                    // e.total  需传输的总字节
+                    var percentComplete = Math.ceil((e.loaded / e.total) * 100)
+                    document.querySelector('#load').innerText = '上传进度：' + percentComplete + '%'
+                }
+            }
+            xhr.open('post', 'http://www.liulongbin.top:3006/api/upload/avatar')
+            xhr.send(fd)
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let data = JSON.parse(xhr.responseText)
+
+                    if (data.status === 200) {
+                        console.log(data);
+                    } else {
+                        console.log('上传失败')
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

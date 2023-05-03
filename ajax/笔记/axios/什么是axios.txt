@@ -1,0 +1,6 @@
+Axios 是专注于网络数据请求的库。
+相比于原生的 XMLHttpRequest 对象，axios 简单易用。
+相比于 jQuery，axios 更加轻量化，只专注于网络数据请求。
+
+
+使用axios要引入axios包
